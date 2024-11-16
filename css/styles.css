@@ -1,0 +1,102 @@
+/* -- CSS for alle enheter -- */
+
+body {
+    font-family: "Instrument Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    gap: 60px;
+    justify-content: center;
+    align-items: center
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.search input {
+    padding: 8px 15px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 20px;
+}
+
+.search, button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button.search-knapp {
+    position: absolute;
+    margin-left: 190px;
+}
+
+.ikoner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    flex: 1;
+}
+
+.ikoner i {
+    color: #000;
+}
+
+/* -- CSS for mobil -- */
+
+@media (max-width: 1050px) {
+    .header {
+        flex-direction: column;
+    }
+    .logo {
+        order: 2;
+        margin-bottom: 10px;
+    }
+    nav {
+        order: 3;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .search {
+        order: 1;
+        margin-bottom: 10px;
+    }
+    .icons {
+        order: 4;
+        padding-bottom: 15px;
+    }
+}

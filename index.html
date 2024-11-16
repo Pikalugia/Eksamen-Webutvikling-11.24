@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hjem - Eksamen</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Henter fonter fra Google Fonts sin API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Henter ikoner fra Font Awesome -->
+    <script src="https://kit.fontawesome.com/e4c92540c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
         <section class="search">
             <input type="text" placeholder="Søk...">
+            <button class="search-knapp">
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </button>
         </section>
         <nav>
             <a href="index.html">Hjem</a>
@@ -17,6 +27,11 @@
             <a href="#">Kategorier</a>
             <a href="#">Kontakt oss</a>
         </nav>
+        <section class="ikoner">
+            <a href="#"><i class="fa-regular fa-user fa-lg"></i></a>
+            <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+            <a href="checkout.html"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
+        </section>
     </header>
 </body>
 </html>
