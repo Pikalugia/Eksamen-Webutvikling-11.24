@@ -1,94 +1,102 @@
+
+/* -- EKSAMENSOPPGAVE -- */
+/* -- Tobias Ugland -- */
+/* -- Webutvikling Høst 2024 -- */
+/* -- Høgskolen i Østfold -- */
+
 /* -- CSS for alle enheter -- */
 
 body {
-    font-family: "Instrument Sans", sans-serif;
-    margin: 0 auto;
-    width: 1400px;
+    font-family: "Instrument Sans", sans-serif;         /* Setter font på hele siden til Instrument Sans */
+    margin: 0 auto;                                     /* Midtstiller all innhold på siden */
+    width: 1400px;                                      /* Plasserer alt innhold innenfor satt bredde, white space på sidene */
 }
 
 section {
-    margin: 0 auto;
+    margin: 0 auto;                                     /* Midtstiller all innhold på siden */
 }
 
 .header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 0px;
+    display: flex;                                      /* Gjør header til en flexbox */
+    flex-wrap: wrap;                                    /* Lar flexbox elementer gå over flere linjer om nødvendig */
+    align-items: center;                                /* Sentrer alle elementer til midten */
+    justify-content: space-between;                     /* Mellomrom i mellom elementer */
+    padding: 40px 0px;                                  /* 40px mellomrom over og under header */
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    flex: 1;
-    text-align: center;
+    font-size: 28px;                                    /* Setter størrelse på logo font */
+    font-weight: bold;                                  /* Bold font */
 }
 
 nav {
-    display: flex;
-    flex: 2;
-    gap: 60px;
-    justify-content: center;
-    align-items: center
+    display: flex;                                      /* Gjør nav til en flexbox */
+    gap: 60px;                                          /* 60px mellomrom i mellom nav elementer */
+    align-items: center                                 /* Sentrer elementer vertikalt */
 }
 
 nav a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    text-align: center;
+    text-decoration: none;                              /* Fjern underline på lenker */
+    color: #000;                                      /* Setter tekstfarge til svart */
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: left;
+    display: flex;                                      /* Gjør søkeboks til en flexbox */
+    align-items: center;                                /* Sentrer elementer vertikalt */
+    flex: 1;                                            /* flex-grow: 1; flex-shrink: 1; */
 }
 
 .search input {
-    padding: 8px 15px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 200px;
-    border-radius: 20px;
+    padding: 8px 15px;                                  /* Padding for å gi pusterom rundt teksten */
+    font-size: 16px;                                    /* Setter størrelse på søkeboks tekst font */
+    max-width: 200px;                                   /* Setter maks størrelse på selve søkeboksen */
+    width: 100%;                                        /* Sørger for at søkeboks bruker all nødvendig plass */
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
 }
 
 .search, button {
-    background: none;
-    border: none;
-    cursor: pointer;
+    background: none;                                   /* Skjuler søke knappen, siden kun ikonet skal syns */
+    border: none;                                       /* Skjuler border rundt søke knappen, siden kun ikonet skal syns */
+    cursor: pointer;                                    /* Endrer utseende på musepeker når du holder over knapp */
 }
 
 button.search-knapp {
-    position: absolute;
-    margin-left: 190px;
+    position: absolute;                                 /* Setter plassering på søkeknapp... */
+    margin-left: 190px;                                 /* ...og den skal på høyre side! */
 }
 
-.ikoner {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: right;
-    flex: 1;
+.icons {
+    display: flex;                                      /* Gjør nav ikoner til en flexbox */
+    gap: 15px;                                          /* Gir ikonene litt pusterom */
+    justify-content: right;                             /* Ikonene skal holdes på høyre side */
+    flex: 1;                                            /* flex-grow: 1; flex-shrink: 1; */
 }
 
-.ikoner i {
-    color: #000;
+.icons i {
+    color: #000000;                                   /* Setter farge på ikonene til svart */
+    transition: 0.3s;                                   /* Lengde på animasjon, brukes på :hover */
+}
+
+.icons i:hover {
+    font-size: 1.5em;                                   /* Når du hoverer ikonet skal ikonene bli litt større */
 }
 
 .banner-container {
-    border-radius: 20px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 20px 0px;
+    overflow-x: auto;                                   /* Innhold i banner containeren skal kunne overflowe uten å være synlig */
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    position: relative;                                 /* Posisjonerer innhold i banner container relativt til original posisjon */
+    margin: 20px 0px;                                   /* Mellomrom under banner container */
 }
 
 .banner-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    display: flex;                                      /* Gjør slides i banner container til en flexbox */
+    overflow-x: auto;                                   /* Innhold i banner containeren skal kunne overflowe uten å syntes - skaper scrollbar */
+    -ms-overflow-style: none;                           /* Skjuler scrollbar på IE og Edge */
+    scrollbar-width: none;                              /* Skjuler scrollbar på Firefox */
+}
+
+.banner-slider:-webkit-scrollbar {
+    display: none;                                      /* Skjuler scrollbar på Chrome, Safari og Opera */
 }
 
 .banner-slide {
@@ -244,9 +252,176 @@ button.search-knapp {
     background: rgba(255, 171, 171, 0.575);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 30px;
+    padding: 40px 0px;
+    grid-template-areas: 
+      "A B C"
+      "D D C"
+      "D D E"; 
+}
+
+.category {
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #f4f4f4;
+    padding: 125px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category:nth-child(1) {
+    grid-area: A;
+    background-image: url("/img/air-jordans.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.category:nth-child(2) {
+    grid-area: B;
+    background-image: url("/img/kaktus.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.category:nth-child(3) {
+    grid-area: C;
+    background-image: url("/img/accessories.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.category:nth-child(4) {
+    grid-area: D;
+    background-image: url("/img/sport.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.category:nth-child(5) {
+    grid-area: E;
+    background-image: url("/img/gaming.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reviews {
+    padding-bottom: 40px;
+}
+
+.review-container {
+    display: flex;
+    overflow-x: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 20px;
+    grid-template-areas: 
+      ". . . ."; 
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* Skjuler scrollbar på IE og Edge */
+    scrollbar-width: none;  /* Skjuler scrollbar på Firefox */
+}
+
+.reviews-container::-webkit-scrollbar {
+    display: none; /* Skjuler scrollbar på Chrome, Safari og Opera */
+}
+
+.review-container .review {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    width: 350px;
+}
+
+.review-container .review img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    padding: 20px 0px 80px 0px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h1, .footer-section h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section.social h2 {
+    margin-bottom: 20px;
+}
+
+/* -- CSS for nettbrett -- */
+
+@media (max-width: 1400px) {
+    body {
+        width: 90%;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .arrow {
+        display: none;
+    }
+    .product-card {
+        background: white;
+        width: calc(50% - 15px);
+        position: relative;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 30px;
+        padding: 40px 0px;
+        grid-template-areas: 
+          "A B"
+          "C D"
+          "E E"; 
+    }
+    .category {
+        grid-column: 1 / 2;
+    }
+    nav {
+        padding-left: 50px;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+}
+
 /* -- CSS for mobil -- */
 
-@media (max-width: 1050px) {
+@media (max-width: 801px) {
+    body {
+        width: 90%;
+    }
     .header {
         flex-direction: column;
     }
@@ -258,27 +433,39 @@ button.search-knapp {
         order: 3;
         flex-direction: column;
         gap: 10px;
+        padding-left: 0px;
         margin-bottom: 10px;
-        align-items: center;
-    }
-    .search {
-        order: 1;
-        margin-bottom: 10px;
+        padding-top: 10px;
     }
     .icons {
         order: 4;
-        padding-bottom: 15px;
     }
     .arrow {
         display: none;
-    }
-    body {
-        width: 90%;
     }
     .product-card {
         background: white;
         overflow: hidden;
         width: 100%;
         position: relative;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "A"
+        "B"
+        "C"
+        "D"
+        "E";
+    }
+    .category {
+        grid-column: 1 / 2;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    section {
+        margin: unset;
     }
 }

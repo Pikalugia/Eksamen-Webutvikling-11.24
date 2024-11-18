@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hjem - Eksamen</title>
+    <!-- Henter CSS lokalt -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Henter fonter fra Google Fonts sin API -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +24,11 @@
         <nav>
             <a href="index.html">Hjem</a>
             <a href="#populære-produkter">Produkter</a>
-            <a href="index.html" class="logo">Eksamen</a>
+            <a href="index.html" class="logo">Logo</a>
             <a href="#popular-products">Kategorier</a>
             <a href="#footer">Kontakt oss</a>
         </nav>
-        <section class="ikoner">
+        <section class="icons">
             <a href="#"><i class="fa-regular fa-user fa-lg"></i></a>
             <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
             <a href="checkout.html"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
@@ -35,7 +36,7 @@
     </header>
     <main>
         <section class="banner-container">
-            <div class="banner-slider" id="banner-slider">
+            <section class="banner-slider" id="banner-slider">
                 <div class="banner-slide slide">
                     <article class="slide-content">
                         <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
@@ -57,7 +58,7 @@
                         <button>LES MER</button>
                     </article>
                 </div>
-            </div>
+            </section>
             <button class="arrow left" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
             <button class="arrow right" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
         </section>
@@ -74,61 +75,125 @@
             <article class="product-card">
                 <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
                 <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
-                <div class="card-content">
-                    <h3>Product name</h3>
+                <section class="card-content">
+                    <h3>Produkt</h3>
                     <p class="price">Kr 1999</p>
-                </div>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Reviews
+                </section>
+                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
                 <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
-                <div class="card-content">
-                    <h3>Product name</h3>
+                <section class="card-content">
+                    <h3>Produkt</h3>
                     <p class="price">Kr 1999</p>
-                </div>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Reviews
+                </section>
+                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
                 <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
-                <div class="card-content">
-                    <h3>Product name</h3>
+                <section class="card-content">
+                    <h3>Produkt</h3>
                     <p class="price">Kr 1999</p>
-                </div>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Reviews
+                </section>
+                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
                 <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
-                <div class="card-content">
-                    <h3>Product name</h3>
+                <section class="card-content">
+                    <h3>Produkt</h3>
                     <p class="price">Kr 1999</p>
-                </div>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Reviews
+                </section>
+                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
                 <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
-                <div class="card-content">
-                    <h3>Product name</h3>
+                <section class="card-content">
+                    <h3>Produkt</h3>
                     <p class="price">Kr 1999</p>
-                </div>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Reviews
+                </section>
+                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
                 <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
-                <div class="card-content">
-                    <h3>Product name</h3>
+                <section class="card-content">
+                    <h3>Produkt</h3>
                     <p class="price">Kr 1999</p>
-                </div>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Reviews
+                </section>
+                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
             </article>
         </section>
         <section id="popular-products" class="centered-title">
             <h2>Våre mest populære kategorier</h2>
             <p>Oppdag det beste av det beste</p>
+            <section class="grid-container">
+                <article class="category">KATEGORI 1</article>
+                <article class="category">KATEGORI 2</article>
+                <article class="category">KATEGORI 3</article>
+                <article class="category">KATEGORI 4</article>
+                <article class="category">KATEGORI 5</article>
+            </section>
+        </section>
+        <section id="reviews" class="reviews">
+            <left><h2>Anmeldelser</h2></left>
+            <section class="review-container">
+                <article class="review">
+                    <img src="img/golden.webp" alt="Rober Golden">
+                    <h3>Rober Golden</h3>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
+                </article>
+                <article class="review">
+                    <img src="img/golden.webp" alt="Rober Golden">
+                    <h3>Rober Golden</h3>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
+                </article>
+                <article class="review">
+                    <img src="img/golden.webp" alt="Rober Golden">
+                    <h3>Rober Golden</h3>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
+                </article>
+                <article class="review">
+                    <img src="img/golden.webp" alt="Rober Golden">
+                    <h3>Rober Golden</h3>
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
+                </article>
+            </section>
+        </section>
     </main>
+    <footer>
+        <hr class="solid">
+        <h2>Logo</h2>
+        <p>At vero eos et accusamus et isuto odio dignissimos ducimus qui blanditiis.</p>
+        <section class="footer-content">
+            <section class="footer-section contact">
+                <h2>KONTAKT</h2>
+                <p><i class="fa-solid fa-location-dot fa-lg"></i>&nbsp;&nbsp;<strong>Adresse:</strong>&nbsp;&nbsp;&nbsp;&nbsp;B R A Veien 4, 1757 Halden</p>
+                <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;<strong>Telefon:</strong>&nbsp;&nbsp;&nbsp;&nbsp;69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<strong>E-post:</strong>&nbsp;&nbsp;&nbsp;&nbsp;halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock"></i>&nbsp;&nbsp;<strong>Åpningstider:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Stenger 15:00</p>
+            </section>
+            <section class="footer-section links">
+                <h2>SNARVEIER</h2>
+                <p><a href="#">Produkter</a></p>
+                <p><a href="#">Kategorier</a></p>
+                <p><a href="#">Kontakt oss</a></p>
+            </section>
+            <section class="footer-section social">
+                <h2>SOSIALE MEDIER</h2>
+                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa-brands fa-pinterest-p fa-2xl"></i></a>
+            </section>
+        </section>
+    </footer>
 </body>
 </html>
