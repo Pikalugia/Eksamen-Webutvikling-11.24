@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktnavn - Eksamen</title>
+    <!-- Henter CSS lokalt -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Henter fonter fra Google Fonts sin API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Henter ikoner fra Font Awesome -->
+    <script src="https://kit.fontawesome.com/e4c92540c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <section class="search">
+            <input type="text" placeholder="Søk...">
+            <button class="search-button">
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </button>
+        </section>
+        <nav>
+            <a href="index.html">Hjem</a>
+            <a href="#popular-products">Produkter</a>
+            <a href="index.html" class="logo">Logo</a>
+            <a href="#popular-categories">Kategorier</a>
+            <a href="#footer">Kontakt oss</a>
+        </nav>
+        <section class="icons">
+            <a href="#"><i class="fa-regular fa-user fa-lg"></i></a>
+            <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+            <a href="checkout.html"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
+        </section>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="index.html">Hjem</a> <i class="fa-solid fa-chevron-right"></i>
+            <a href="index.html#popular-categories">Kategorier</a> <i class="fa-solid fa-chevron-right"></i>
+            <a href="product.html"><strong>Produktnavn</strong></a>
+        </nav>
+        <section class="product-container">
+            <aside class="images-container">
+                <img src="img/air-jordans-product2.webp" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ved siden av hverandre.">
+                <img src="img/air-jordans-product3.webp" alt="Bilde av Air Jordans 1 High Dark Mocha sett fra siden.">
+                <img src="img/air-jordans-product4.webp" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ovenfra.">
+            </aside>
+            <section class="main-image">
+                <img src="img/air-jordans-product.webp" alt="Bilde av person som sitter på stol, kamerafokus på Air Jordans 1 High Dark Mocha sko.">
+            </section>
+            <section class="details">
+                <h1>AIR JORDAN 1 HIGH - Høye joggesko</h1>
+                <h2>Jordan</h2>
+                <p class="price">1 845 kr inkl. mva.</p>
+                <p>Farge: Dark Mocha</p>
+                <select id="size" name="size">
+                    <option value="">Velg størrelse</option>
+                    <option value="">XS</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                </select>
+                <div class="product-buttons">
+                    <button>Legg i handlekurv</button>
+                    <button class="heart-button"><i class="fa-regular fa-heart fa-lg"></i></button>
+                </div>
+                <hr class="solid">
+                <details>
+                    <summary>Materiale og vedlikehold <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
+                    <ul>
+                        <li>Overmateriale: 95% vikose, 5% elastan</li>
+                        <li>Materiale ermer: 100% polyester</li>
+                        <li>Materiale: jersey</li>
+                      </ul>
+                </details>
+                <hr class="solid">
+                <details>
+                    <summary>Produktdetaljer <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
+                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavillions, award-winning fireworks and seasonal special events.</p>
+                </details>
+                <hr class="solid">
+                <details>
+                    <summary>Størrelsestabell <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
+                    <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
+                    <table class="sizing-table">
+                        <tr>
+                            <th>EU</th>
+                            <th>INT</th>
+                            <th>BRYSTVIDDE</th>
+                            <th>LIVVIDDE</th>
+                            <th>HOFTEMÅL</th>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>XXS</td>
+                            <td>76</td>
+                            <td>63</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>XS</td>
+                            <td>80</td>
+                            <td>66</td>
+                            <td>89</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>S</td>
+                            <td>84</td>
+                            <td>69</td>
+                            <td>93</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>M</td>
+                            <td>88</td>
+                            <td>72</td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>L</td>
+                            <td>92</td>
+                            <td>76</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>XL</td>
+                            <td>96</td>
+                            <td>80</td>
+                            <td>103</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>XXL</td>
+                            <td>100</td>
+                            <td>85</td>
+                            <td>106</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>3XL</td>
+                            <td>104</td>
+                            <td>90</td>
+                            <td>109</td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>4XL</td>
+                            <td>110</td>
+                            <td>96.5</td>
+                            <td>114</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>5XL</td>
+                            <td>116</td>
+                            <td>103</td>
+                            <td>119</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>6XL</td>
+                            <td>122</td>
+                            <td>109.5</td>
+                            <td>124</td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>7XL</td>
+                            <td>128</td>
+                            <td>116</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>8XL</td>
+                            <td>134</td>
+                            <td>122.5</td>
+                            <td>136</td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>9XL</td>
+                            <td>140</td>
+                            <td>129</td>
+                            <td>142</td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>10XL</td>
+                            <td>146</td>
+                            <td>135.5</td>
+                            <td>148</td>
+                        </tr>
+                      </table>
+                </details>
+                <hr class="solid">
+                <details>
+                    <summary>Anmeldelser <span><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> 32</span></summary>
+                    <article class="product-review">
+                        <p>Rober Golden</p>
+                        <p>2024-11-21</p>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
+                    </article>
+                </details>
+            </section>
+        </section>
+        <section>
+            <section id="similiar-products" class="similiar-products">
+                <h2>Lignende produkter</h2> <!--Se flere lignende produkter <i class="fa-solid fa-chevron-right"></i>-->
+                <section class="scrolling-container">
+                    <article class="scrolling-product-card">
+                        <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
+                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <section class="card-content">
+                            <h3>Produkt</h3>
+                            <p class="price">Kr 1999</p>
+                        </section>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                    </article>
+                    <article class="scrolling-product-card">
+                        <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
+                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <section class="card-content">
+                            <h3>Produkt</h3>
+                            <p class="price">Kr 1999</p>
+                        </section>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                    </article>
+                    <article class="scrolling-product-card">
+                        <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
+                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <section class="card-content">
+                            <h3>Produkt</h3>
+                            <p class="price">Kr 1999</p>
+                        </section>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                    </article>
+                    <article class="scrolling-product-card">
+                        <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
+                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <section class="card-content">
+                            <h3>Produkt</h3>
+                            <p class="price">Kr 1999</p>
+                        </section>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                    </article>
+                    <article class="scrolling-product-card">
+                        <img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Product image">
+                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <section class="card-content">
+                            <h3>Produkt</h3>
+                            <p class="price">Kr 1999</p>
+                        </section>
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                    </article>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer id="footer">
+        <hr class="solid">
+        <h2>Logo</h2>
+        <p>At vero eos et accusamus et isuto odio dignissimos ducimus qui blanditiis.</p>
+        <section class="footer-content">
+            <section class="footer-section contact">
+                <h2>KONTAKT</h2>
+                <p><i class="fa-solid fa-location-dot fa-lg"></i>&nbsp;&nbsp;<strong>Adresse:</strong>&nbsp;&nbsp;&nbsp;&nbsp;B R A Veien 4, 1757 Halden</p>
+                <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;<strong>Telefon:</strong>&nbsp;&nbsp;&nbsp;&nbsp;69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<strong>E-post:</strong>&nbsp;&nbsp;&nbsp;&nbsp;halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock"></i>&nbsp;&nbsp;<strong>Åpningstider:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Stenger 15:00</p>
+            </section>
+            <section class="footer-section links">
+                <h2>SNARVEIER</h2>
+                <p><a href="#">Produkter</a></p>
+                <p><a href="#">Kategorier</a></p>
+                <p><a href="#">Kontakt oss</a></p>
+            </section>
+            <section class="footer-section social">
+                <h2>SOSIALE MEDIER</h2>
+                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#"><i class="fa-brands fa-pinterest-p fa-2xl"></i></a>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
