@@ -5,7 +5,7 @@
 /* -- Høgskolen i Østfold -- */
 
 
-/* -- CSS for desktop + alle enheter -- */
+/* -- CSS for alle enhetsstørrelser -- */
 
 
 body {
@@ -41,7 +41,7 @@ nav {
 
 nav a {
     text-decoration: none;                              /* Fjern underline på lenker */
-    color: #000000;                                      /* Setter tekstfarge til svart */
+    color: #000000;                                   /* Setter tekstfarge til svart */
 }
 
 .search {
@@ -122,6 +122,10 @@ button.search-button {
 .slide-content {
     text-align: center;                                 /* Sentrerer tekst i slide innhold horisontalt */
     width: 75%;                                         /* Tekst skal bruke 75% av bredden i hver slide */
+}
+
+.slide-content h2 {
+    color: #FFFFFF;                                   /* Tittel på farge i slide content settes til hvit */
 }
 
 .slide-content button {
@@ -216,13 +220,18 @@ button.search-button {
     justify-content: space-between;                     /* Deretter posisjonerer vi de på motsatt side av hverandre. */
 }
 
+.product-card .card-content a {
+    text-decoration: none;                              /* Tittel-lenkene på produkt skal ikke ha underline. */
+}
+
 .product-card .card-content h3 {
     font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
+    color: #000000;                                   /* Setter farge på tekst til svart */
 }
 
 .product-card .card-content .price {
     font-size: 14px;                                    /* Setter størrelse på tekst til 14px */
-    color: #999;                                      /* Setter farge på tekst til grå */
+    color: #999999;                                   /* Setter farge på tekst til grå */
 }
 
 .favorite-icon {
@@ -240,7 +249,6 @@ button.search-button {
 }
 
 /* KATEGORIER */
-/* NOTAT: Her slet jeg veldig underveis, men lærte om "grid-template-areas" som funket perfekt til å posisjonere kategorier riktig. */
 
 .grid-container {
     display: grid;                                      /* Vi gjør grid containeren til kategoriene til en grid. */
@@ -258,9 +266,9 @@ button.search-button {
     font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
     color: #FFFFFF;                                   /* Setter farge på font til hvit */
     background-color: #DDDDDD;                        /* Hvis nettsiden ikke klarer å laste ned bilde - bruk grå farge. */
-    padding: 125px;                                     /* Vi setter størrelsen på rommet rundt teksten i boksen. */
+    padding: 125px;                                     /* Jeg setter størrelsen på rommet rundt teksten i boksen. */
     border-radius: 20px;                                /* Hurra for runde hjørner! */
-    display: flex;                                      /* Vi gjør kategoriboksene til en flexbox... */
+    display: flex;                                      /* Jeg gjør kategoriboksene til en flexbox... */
     justify-content: center;                            /* ...slik at vi kan justere innholdet til å være i midten. */
     align-items: center;                                /* Ditto. */
 }
@@ -302,20 +310,17 @@ button.search-button {
     background-size: cover;
 }
 
-/* ANMELDELSER */
+/* SCROLL CONTAINER */
 
 .scrolling-container {
-    display: flex;                                     /* Vi gjør review containeren til en flexbox. */
+    display: flex;                                     /* Jeg gjør scroll containeren til en flexbox. */
     overflow-x: auto;                                  /* Her passer vi på at innhold i flexboxen ikke vises om det "blør" utenfor siden. */
-    gap: 20px;                                         /* Vi gir review boksene et mellomrom på 20px. */
-    -ms-overflow-style: none;                          /* Skjuler scrollbar på IE og Edge */
-    scrollbar-width: none;                             /* Skjuler scrollbar på Firefox */
-    padding-bottom: 40px;                              /* Vi lager et mellomrom på bunn av review containeren. */
+    gap: 20px;                                         /* Jeg gir boksene inni et mellomrom på 20px. */
+    padding-bottom: 20px;                              /* 20px mellomrom fra container til scrollbar */
+    margin-bottom: 80px;                               /* Jeg lager et mellomrom på bunn av scroll containeren. */
 }
 
-.reviews-container::-webkit-scrollbar {
-    display: none;                                     /* Skjuler scrollbar på Chrome, Safari og Opera */
-}
+/* ANMELDELSER */
 
 .scrolling-container .review {
     border: 1px solid #DDDDDD;                       /* Lager en border på 1px i grå farge rundt anmeldelsene. */
@@ -334,8 +339,14 @@ button.search-button {
 /* FOOTER */
 
 .footer-content {
-    display: flex;                                      /* Vi gjør footer til en flexbox. */
+    display: flex;                                      /* Gjør footer til en flexbox. */
     padding: 20px 0px 80px 0px;                         /* Jeg gir footer mellomrom 20px over og 80px under. */
+}
+
+footer a {
+    text-decoration: none;                              /* Fjern underline på logo lenke i footer */
+    color: #000000;                                   /* Setter tekstfarge til svart */
+    display: inline-block;
 }
 
 .footer-section {
@@ -361,62 +372,74 @@ button.search-button {
     margin-bottom: 20px;                                /* 20px mellomrom under ikonene i footer. */
 }
 
+/* PRODUKT-SIDE */
+
 nav.breadcrumb {
-    gap: 20px;
-    padding-bottom: 30px;
+    gap: 20px;                                          /* Breadcrumbs skal ha 20px mellomrom i mellom hverandre. */
+    padding-bottom: 30px;                               /* Lager også et 30px mellomrom under. */
 }
 
 .product-container {
-    display: flex;
-    gap: 20px;
+    display: flex;                                      /* Gjør product container til en flexbox... */
+    gap: 40px;                                          /* ...og gir elementene 40px mellomrom. */
+    padding-bottom: 40px;                               /* Selve product containeren får også 40px mellomrom under */
 }
 
-.images-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: sticky;
-    top: 20px;
+/* PRODUKT BILDER */
+
+.product-images {
+    position: sticky;                                   /* Produktbildene skal være "sticky" (synlig hele tiden) når du scroller nedover. */
+    height: 690px;                                      /* Makshøyden må settes for at position: sticky skal skjønne hvor den skal stoppe. */
+    top: 10%;                                           /* Den skal begynne å sticke når du har scrollet ned 10% av siden. */
+    display: flex;                                      /* Gjør container med produkt bildene til en flexbox... */
+    flex-direction: row;                                /* ...og setter retningen på den til flex-direction: row */
+    flex: 2;                                            /* Container med produkt bildene gis en flex verdi på 2 */
+    gap: 40px;                                          /* Vi gir elementene 40px mellomrom. */
 }
 
-.images-container img {
-    width: 200px;
-    height: auto;
-    border-radius: 20px;
+.aside-images {
+    flex: 1;                                            /* De små bildene på venstre side skal ha en flex verdi på 1... */
+}
+
+.aside-images img {
+    width: 100%;                                        /* De små bildene skal bruke 100% av sin tilgitte bredde. */
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
+}
+
+.main-image {
+    flex: 3.5;                                          /* Hovedbildet skal ha en flex verdi på 3.5... */
 }
 
 .main-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
+    width: 100%;                                        /* Hovedbildet skal bruke 100% av sin tilgitte bredde. */
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
 }
 
+/* PRODUKT DETALJER */
+
 .details {
-    padding-left: 20px;
-    min-width: 500px;
-    max-width: 500px;
+    flex: 1;                                            /* Container med produkt detaljer gis en flex verdi på 1 */
 }
 
 .details h1, .details h2, .details p, .details button, .details select, .details section, .details footer {
-    margin-bottom: 20px;
+    margin-bottom: 20px;                                /* Mellomrom på 20px rundt forskjellige deler av detaljer. */
 }
 
 .price {
-    font-size: 24px;
-    color: #333333;
+    font-size: 24px;                                    /* Størrelsen på font for pris settes til 24px */
+    color: #333333;                                   /* Fargen på font for pris settes til grå */
 }
 
 .product-buttons {
-    display: flex;
-    gap: 10px;
+    display: flex;                                      /* Produkt knappene (Legg til Handlevogn + Hjerte) gjøres til en flexbox. */
+    gap: 10px;                                          /* De får også et mellomrom på 10px. */
 }
 
 .product-buttons button {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #FFFFFF;
-    cursor: pointer;
+    padding: 10px 20px;                                 /* Størrelse og plass inni knapp */
+    background-color: #000000;                        /* Fargen på knapp settes til svart */
+    color: #FFFFFF;                                   /* Fargen på tekst inni knapp settes til hvit */
+    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
     border-radius: 20px;                                /* Hurra for runde hjørner! */
     font-family: "Instrument Sans", sans-serif;         /* Setter font på knapper til Instrument Sans */
     font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
@@ -424,85 +447,76 @@ nav.breadcrumb {
 }
 
 .product-buttons button:hover {
-    background-color: #333333;
+    background-color: #333333;                        /* Fargen på knappen skal gjøres gråere når du holder over den. */
 }
 
 .product-buttons button, .product-buttons .heart-button {
-    width: 100%;
-    text-align: center;
+    width: 100%;                                        /* Container rundt favorittknappen skal bruke 100% av sin tilgitte bredde. */
 }
 
 .product-buttons .heart-button {
-    border: 1px solid #CCCCCC;
-    background-color: #FFFFFF;
-    color: #000000;
-    width: 20%;
-    cursor: pointer;
+    border: 1px solid #CCCCCC;                        /* Favorittknappen får en border rundt på 1px med grå farge. */
+    background-color: #FFFFFF;                        /* Fargen på knapp settes til hvit */
+    color: #000000;                                   /* Fargen på ikon inni knapp settes til svart */
+    width: 20%;                                         /* Knappen skal bruke 20% av bredden */
+    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
 }
+
 .product-buttons .heart-button:hover {
-    background-color: #F0F0F0;
+    background-color: #F0F0F0;                        /* Fargen på knappen skal gjøres gråere når du holder over den. */
 }
 
 select {
-    padding: 10px;
-    width: 100%;
+    padding: 10px;                                      /* "Velg størrelse"-menyen får 10px mellomrom rundt den... */
+    width: 100%;                                        /* ...og den skal bruke 100% av bredden. */
 }
 
 select#size {
-    border-radius: 20px;
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 16px;
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    font-family: "Instrument Sans", sans-serif;         /* Setter font på knapper til Instrument Sans */
+    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
 }
 
-
 details {
-    padding: 15px 0;
+    padding: 15px 0;                                    /* Expand-boksene til mer produktinfo får 15px mellomrom over og under. */
 }
 
 summary {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 800;
-    padding: 10px 0px;
+    display: flex;                                      /* Expand-boksene skal bli en flexbox. */
+    justify-content: space-between;                     /* Innhold skal være spredd til hver side av boksene. */
+    cursor: pointer;                                    /* Endrer musepeker når du hoverer over boksen. */
+    font-size: 14px;                                    /* Setter størrelse på tekst til 16px */
+    font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
+    padding: 10px 0px;                                  /* De får 10px mellomrom over og under. */
 }
 
 table.sizing-table {
-    border: 1px solid #CCCCCC;
-    padding: 5px;
+    border: 1px solid #CCCCCC;                        /* Jeg ga størrelsestabellen en border på 1px i grå farge... */
+    padding: 5px;                                       /* ...med et 5px mellomrom rundt. */
 }
 
 table.sizing-table tbody tr td {
-    text-align: center;
-    border: 1px solid #CCCCCC;
-    padding: 5px;
+    text-align: center;                                 /* Teksten i størrelsestabellen midtstilles */
+    border: 1px solid #CCCCCC;                        /* Jeg ga også hvert individuelle element en border på 1px i grå farge... */
+    padding: 5px;                                       /* ...med et 5px mellomrom rundt. */
 }
 
 table.sizing-table tbody tr th {
-    border-spacing: 10px;
-    gap: 20px;
-    padding: 5px;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+    padding: 8px;                                       /* Titlene i størrelsestabellen får et ekstra mellomrom på 8px. */
 }
 
 .product-review {
-    border: 1px solid #CCCCCC;
-    padding: 0px 15px;
-    margin-top: 20px;
-    border-radius: 20px;
+    border: 1px solid #CCCCCC;                        /* Anmeldelsesboksen får border på 1px i grå farge... */
+    padding: 0px 15px;                                  /* ...med 15px ekstra rom inni boksen på høyre og venstre side... */
+    margin-top: 20px;                                   /* ...og et mellomrom på 20px over boksen. */
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
 }
 
 .product-review p {
-    margin-bottom: 15px;
+    margin-bottom: 15px;                                /* Teksten inni anmeldelsesboksen får justert 15px mellomrom under. */
 }
 
-.scrolling-product-card {
-    width: 300px;                                       
-    position: relative;                                 /* Produktkorta skal være posisjonert relativt - brukes til favoritt ikonet. */
-}
+/* PRODUKTKORT FEAT. SCROLLING */
 
 .scrolling-product-card img {
     width: 300px;                                       /* Vi setter bredden på bildet inni kortet. */
@@ -520,7 +534,182 @@ table.sizing-table tbody tr th {
 
 .scrolling-product-card .card-content .price {
     font-size: 14px;                                    /* Setter størrelse på tekst til 14px */
-    color: #999999;                                      /* Setter farge på tekst til grå */
+    color: #999999;                                   /* Setter farge på tekst til grå */
+}
+
+.scrolling-product-card {
+    padding-bottom: 20px;                               /* 20px mellomrom fra container til scrollbar */
+}
+
+/* HANDLEKURV */
+
+.shopping-cart-step {
+    background-color: #fff;
+    padding: 40px 200px;
+    border: 1px solid #CCCCCC;                        /* Anmeldelsesboksen får border på 1px i grå farge... */
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.shopping-cart-step h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.cart-item figure {
+    margin: 0;
+}
+
+.cart-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-cart-info {
+    position: relative;                                 /* Produktkorta skal være posisjonert relativt - brukes til favoritt ikonet senere. */
+    flex: 1;
+}
+
+.product-cart-info h2 {
+    margin: 10;
+    font-size: 20px;
+}
+
+.product-cart-info .price, .product-cart-info .color {
+    margin: 5px 0;
+    font-size: 18px;                                    /* Størrelsen på font for pris settes til 24px */
+    color: #333333;                                   /* Fargen på font for pris settes til grå */
+}
+
+.item-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item-options label {
+    margin-right: 5px;
+    font-size: 18px;                                    /* Størrelsen på font for pris settes til 24px */
+}
+
+.item-options select, .item-options input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 10%;
+    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
+}
+
+.item-actions {
+    position: absolute;                                 /* Posisjonert inni produkt korta ankeret til høyre topp. */
+    top: 10px;                                          /* 10px fra topp. */
+    right: 10px;                                        /* 10px fra høyre. */
+    align-items: center;
+    gap: 10px;
+}
+
+.item-actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.item-actions .favorite {
+    color: #e74c3c;
+}
+
+.item-actions .delete {
+    color: #e74c3c;
+}
+
+.item-actions .icon {
+    top: 10px;                                          /* 10px fra topp. */
+    right: 10px;                                        /* 10px fra høyre. */
+    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    padding: 6px 8px;                                   /* Gir knappen mellomrom inni til ikonet. */
+    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    width: 75px;
+}
+
+.icon:hover {
+    background-color: #F0F0F0;                        /* Fargen på knappen skal gjøres gråere når du holder over den. */
+}
+
+/* KONTAKTOPPLYSNINGER */
+
+.checkout-form {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.shopping-cart-form {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.shopping-cart-form label {
+    font-size: 1rem;
+    color: #333;
+    display:flex;
+    flex-direction:column;
+  }
+
+.shopping-cart-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display:flex;
+    flex-direction:column;
+}
+
+.shopping-cart-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -560,6 +749,38 @@ table.sizing-table tbody tr th {
         padding-left: 50px;
         margin-bottom: 20px;
         padding-top: 10px;
+    }
+    nav.breadcrumb {
+        flex-direction: row;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+    .product-images {
+        position: static;
+        height: 100%;
+        display: flex;
+        gap: 40px;
+    }
+    .aside-images {
+        flex: 1;
+    }
+    .aside-images img {
+        border-radius: 20px;
+        width: 100%;
+    }
+    .main-image {
+        display: inline-block;
+        flex: 3.5;
+    }
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .details {
+        padding-left: 0px;
+        max-width: 100%;
+        min-width: 100%;
     }
 }
 
@@ -616,5 +837,8 @@ table.sizing-table tbody tr th {
     }
     section {
         margin: unset;
+    }
+    .product-images {
+        gap: 20px;
     }
 }
