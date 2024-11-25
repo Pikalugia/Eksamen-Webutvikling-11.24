@@ -11,7 +11,7 @@
 body {
     font-family: "Instrument Sans", sans-serif;         /* Setter font på hele siden til Instrument Sans */
     margin: 0 auto;                                     /* Midtstiller all innhold på siden */
-    width: 1400px;                                      /* Plasserer alt innhold innenfor satt bredde, white space på sidene */
+    width: 1200px;                                      /* Plasserer alt innhold innenfor satt bredde, white space på sidene */
 }
 
 section {
@@ -110,7 +110,7 @@ button.search-button {
     height: 500px;                                      /* Setter høyde på slides til 500px */
     display: flex;                                      /* Gjør slides i .banner-slider i .banner-container til en flexbox */
     align-items: center;                                /* Sentrerer alle elementer vertikalt */
-    justify-content: center;                            /* Sentrerer alle elementer horisontalt */
+    justify-content: flex-end;                          /* Sentrerer alle elementer horisontalt */
     color: #FFFFFF;                                   /* Setter farge på tekst til hvit */
     font-size: 24px;                                    /* Setter størrelse på tekst til 24px */
 }
@@ -120,8 +120,9 @@ button.search-button {
 }
 
 .slide-content {
-    text-align: center;                                 /* Sentrerer tekst i slide innhold horisontalt */
-    width: 75%;                                         /* Tekst skal bruke 75% av bredden i hver slide */
+    text-align: right;                                  /* Sentrerer tekst i slide innhold horisontalt */
+    width: 45%;                                         /* Tekst skal bruke 75% av bredden i hver slide */
+    padding-right: 15%;
 }
 
 .slide-content h2 {
@@ -134,7 +135,7 @@ button.search-button {
     font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
     border-radius: 20px;                                /* Hurra for runde hjørner! */
     font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
-    margin: 20px;                                       /* Gir knappen litt pusterom under teksten */
+    margin: 10px 0px;                                   /* Gir knappen litt pusterom under teksten */
     padding: 10px 40px;                                 /* Størrelse og plass inni knapp */
 }
 
@@ -220,8 +221,9 @@ button.search-button {
     justify-content: space-between;                     /* Deretter posisjonerer vi de på motsatt side av hverandre. */
 }
 
-.product-card .card-content a {
+.card-content a {
     text-decoration: none;                              /* Tittel-lenkene på produkt skal ikke ha underline. */
+    color: #000000;                                   /* Setter farge på tekst til svart */
 }
 
 .product-card .card-content h3 {
@@ -781,6 +783,13 @@ fieldset {
         padding-left: 0px;
         max-width: 100%;
         min-width: 100%;
+    }
+    .slide-content {
+        width: 80%;
+        padding-right: 0%;
+    }
+    .banner-slide {
+        justify-content: center;
     }
 }
 
