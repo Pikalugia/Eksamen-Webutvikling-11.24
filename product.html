@@ -29,9 +29,9 @@
             <a href="#footer">Kontakt oss</a>
         </nav>
         <section class="icons">
-            <a href="#"><i class="fa-regular fa-user fa-lg"></i></a>
-            <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
+            <a href="#" aria-label="Konto"><i class="fa-regular fa-user fa-lg"></i></a>
+            <a href="#" aria-label="Favoritter"><i class="fa-regular fa-heart fa-lg"></i></a>
+            <a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
         </section>
     </header>
     <main>
@@ -53,7 +53,7 @@
             </section>
             <section class="details">
                 <h1>AIR JORDAN 1 HIGH - Høye joggesko</h1>
-                <h2>Jordan</h2>
+                <a href="#"><h2>Jordan</h2></a>
                 <p class="price">1 845 kr inkl. mva.</p>
                 <p class="color">Farge: Dark Mocha</p>
                 <select id="size" name="size">
@@ -66,11 +66,11 @@
                 </select>
                 <div class="product-buttons">
                     <button>Legg i handlekurv</button>
-                    <button class="heart-button"><i class="fa-regular fa-heart fa-lg"></i></button>
+                    <button class="heart-button" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                 </div>
                 <hr class="solid">
                 <details>
-                    <summary>Materiale og vedlikehold <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
+                    <summary>Materiale og vedlikehold <span><i class="fa-solid fa-plus fa-sm" aria-label="Åpne for å lese mer"></i></span></summary>
                     <ul>
                         <li>Overmateriale: 95% vikose, 5% elastan</li>
                         <li>Materiale ermer: 100% polyester</li>
@@ -79,12 +79,12 @@
                 </details>
                 <hr class="solid">
                 <details>
-                    <summary>Produktdetaljer <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
+                    <summary>Produktdetaljer <span><i class="fa-solid fa-plus fa-sm" aria-label="Åpne for å lese mer"></i></span></summary>
                     <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavillions, award-winning fireworks and seasonal special events.</p>
                 </details>
                 <hr class="solid">
                 <details>
-                    <summary>Størrelsestabell <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
+                    <summary>Størrelsestabell <span><i class="fa-solid fa-plus fa-sm" aria-label="Åpne for å lese mer"></i></span></summary>
                     <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
                     <table class="sizing-table">
                         <tr>
@@ -203,7 +203,7 @@
                 </details>
                 <hr class="solid">
                 <details>
-                    <summary>Anmeldelser <span><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> 32</span></summary>
+                    <summary>Anmeldelser <span><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star" aria-label="Åpne for å lese mer"></i> 32</span></summary>
                     <article class="product-review">
                         <p>Rober Golden</p>
                         <p>2024-11-21</p>
@@ -215,11 +215,14 @@
         </section>
         <section>
             <section id="similiar-products" class="similiar-products">
-                <h2>Lignende produkter</h2>
+                <section class="similiar-products-title">
+                    <h2 class="similar-products-title">Lignende produkter</h2>
+                    <a href="#">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
+                </section>
                 <section class="scrolling-container">
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
                         <section class="card-content">
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
@@ -228,7 +231,7 @@
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
                         <section class="card-content">
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
@@ -237,7 +240,7 @@
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
                         <section class="card-content">
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
@@ -246,7 +249,7 @@
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
                         <section class="card-content">
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
@@ -255,7 +258,7 @@
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
                         <section class="card-content">
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
@@ -264,7 +267,7 @@
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <div class="favorite-icon"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></div>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
                         <section class="card-content">
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
@@ -295,10 +298,10 @@
             </section>
             <section class="footer-section social">
                 <h2>SOSIALE MEDIER</h2>
-                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><i class="fa-brands fa-pinterest-p fa-2xl"></i></a>
+                <a href="https://instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://pinterest.com/" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p fa-2xl"></i></a>
             </section>
         </section>
     </footer>

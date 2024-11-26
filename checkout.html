@@ -29,12 +29,13 @@
             <a href="#footer">Kontakt oss</a>
         </nav>
         <section class="icons">
-            <a href="#"><i class="fa-regular fa-user fa-lg"></i></a>
-            <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
+            <a href="#" aria-label="Konto"><i class="fa-regular fa-user fa-lg"></i></a>
+            <a href="#" aria-label="Favoritter"><i class="fa-regular fa-heart fa-lg"></i></a>
+            <a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
         </section>
     </header>
     <main>
+        <a href="index.html" class="styled-link"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</a>
         <section class="centered-title">
             <h2>Handlekurv</h2>
             <section class="shopping-cart-step">
@@ -61,8 +62,8 @@
                         <input type="number" id="quantity" name="quantity" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
+                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
                     </section>
                 </article>
                 <article class="cart-item">
@@ -87,8 +88,8 @@
                         <input type="number" id="quantity" name="quantity" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
+                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
                     </section>
                 </article>
                 <article class="cart-item">
@@ -113,8 +114,8 @@
                         <input type="number" id="quantity" name="quantity" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
+                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
                     </section>
                 </article>
                 <article class="cart-item">
@@ -139,8 +140,8 @@
                         <input type="number" id="quantity" name="quantity" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
+                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
                     </section>
                 </article>
             </section>
@@ -181,7 +182,7 @@
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="email">E-post</label>
-                                <input type="email" id="email" name="email" placeholder="Norandman@hiof.no*">
+                                <input type="email" id="email" name="email" placeholder="norandman@hiof.no*">
                             </section>
                         </section>
                         <section class="shopping-cart-form">
@@ -191,12 +192,75 @@
                         </section>
                     </section>
                     </fieldset>
-                    <div class="product-buttons">
-                        <button type="submit">Lagre</button>
-                    </div>
+                    <button class="checkout-button" type="submit">Lagre</button>
+                    &nbsp;
                     <a href="#">Avbryt</a>
                 </form>
             </section>
+            <section class="shopping-cart-step">
+                <h1>3. Levering</h1>
+                <form>
+                    <fieldset>
+                        <h4>Leveringsvalg</h4>
+                        <div class="delivery-option">
+                            <input type="radio" name="delivery" value="express_home"><label>Express Hjemlevering</label>
+                            <p class="delivery-details">3-4 Virkedager</p>
+                            <p class="delivery-price">59 kr&nbsp;&nbsp;<i class="fa-solid fa-truck-fast" aria-label="Ekspress hjemlevering"></i></p>
+                            <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                        </div>
+        
+                        <div class="delivery-option">
+                            <input type="radio" name="delivery" value="express_home"><label>Ekspress Pakke til utleveringssted</label>
+                            <p class="delivery-details">1-3 Virkedager</p>
+                            <p class="delivery-price">59 kr&nbsp;&nbsp;<i class="fa-solid fa-truck" aria-label="Ekspress levering til utleveringssted"></i></p>
+                        </div>
+        
+                        <div class="delivery-option">
+                            <input type="radio" name="delivery" value="standard_home"><label>Standard Hjemlevering</label>
+                            <p class="delivery-details">5-8 Virkedager</p>
+                            <p class="delivery-price">Gratis&nbsp;&nbsp;<i class="fa-solid fa-box-open" aria-label="Hjemlevering"></i></p>
+                            <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="shopping-cart-step">
+                <h1>4. Betaling</h1>
+                <form>
+                    <fieldset>
+                        <h4>Betal med kort <i class="fa-regular fa-credit-card fa-sm" aria-label="Betalingskort"></i></h4>
+
+                        <section class="shopping-cart-form">
+                            <section class="shopping-cart-form-group">
+                                <label for="cardNumber">Kortnummer</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="342342****4435">
+                            </section>
+                        </section>
+                        <section class="shopping-cart-form">
+                            <section class="shopping-cart-form-group">
+                                <label for="expiryDate">Utløpsdato</label>
+                                <input type="date" id="expiryDate" name="expiryDate" placeholder="mm / dd / yyyy">
+                            </section>
+                            <section class="shopping-cart-form-group">
+                                <label for="cvccvv">CVC/CVV</label>
+                                <input type="number" id="cvccvv" name="cvccvv" placeholder="CVC/CVV">
+                            </section>
+                        </section>
+                        <hr class="solid">
+                        <section class="centered-title">
+                            <p>Å betale inkl. mva.</p>
+                            <h2>1 199 kr</h2>
+                            <button class="checkout-button" type="submit">Fullfør kjøp</button>
+                            <p class="disclaimer">Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                            <br>
+                            <label class="shopping-cart-checkbox"><input type="checkbox" name="agree-to-terms">Ja, opplysningene er korrekt og jeg godtar vilkårene.</label>
+                            <br>
+                            <label class="shopping-cart-checkbox"><input type="checkbox" name="newsletter">Ja takk! Jeg ønsker nyhetsbrev med nyheter og tilbud.</label>
+                        </section>
+                    </fieldset>
+                </form>
+            </section>
+        </section>
     </main>
     <footer id="footer">
         <hr class="solid">
@@ -205,10 +269,10 @@
         <section class="footer-content">
             <section class="footer-section contact">
                 <h2>KONTAKT</h2>
-                <p><i class="fa-solid fa-location-dot fa-lg"></i>&nbsp;&nbsp;<strong>Adresse:</strong>&nbsp;&nbsp;&nbsp;&nbsp;B R A Veien 4, 1757 Halden</p>
-                <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;<strong>Telefon:</strong>&nbsp;&nbsp;&nbsp;&nbsp;69 60 80 00</p>
-                <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<strong>E-post:</strong>&nbsp;&nbsp;&nbsp;&nbsp;halden@hiof.no</p>
-                <p><i class="fa-solid fa-clock"></i>&nbsp;&nbsp;<strong>Åpningstider:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Stenger 15:00</p>
+                <p><i class="fa-solid fa-location-dot fa-lg" aria-label="Adresse"></i>&nbsp;&nbsp;<strong>Adresse:</strong>&nbsp;&nbsp;&nbsp;&nbsp;B R A Veien 4, 1757 Halden</p>
+                <p><i class="fa-solid fa-phone" aria-label="Telefon"></i>&nbsp;&nbsp;<strong>Telefon:</strong>&nbsp;&nbsp;&nbsp;&nbsp;69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope" aria-label="E-post"></i>&nbsp;&nbsp;<strong>E-post:</strong>&nbsp;&nbsp;&nbsp;&nbsp;halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock" aria-label="Åpningstider"></i>&nbsp;&nbsp;<strong>Åpningstider:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Stenger 15:00</p>
             </section>
             <section class="footer-section links">
                 <h2>SNARVEIER</h2>
@@ -218,10 +282,10 @@
             </section>
             <section class="footer-section social">
                 <h2>SOSIALE MEDIER</h2>
-                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><i class="fa-brands fa-pinterest-p fa-2xl"></i></a>
+                <a href="https://instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://pinterest.com/" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p fa-2xl"></i></a>
             </section>
         </section>
     </footer>

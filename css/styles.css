@@ -1,288 +1,280 @@
-
 /* -- EKSAMENSOPPGAVE -- */
 /* -- Tobias Ugland -- */
 /* -- Webutvikling Høst 2024 -- */
 /* -- Høgskolen i Østfold -- */
 
-
-/* -- CSS for alle enhetsstørrelser -- */
-
+/* BODY */
 
 body {
-    font-family: "Instrument Sans", sans-serif;         /* Setter font på hele siden til Instrument Sans */
-    margin: 0 auto;                                     /* Midtstiller all innhold på siden */
-    width: 1200px;                                      /* Plasserer alt innhold innenfor satt bredde, white space på sidene */
+    font-family: "Instrument Sans", sans-serif;
+    margin: 0 auto;
+    width: 90%;
 }
 
 section {
-    margin: 0 auto;                                     /* Midtstiller all innhold på siden */
+    margin: unset;
 }
 
 /* HEADER */
 
 .header {
-    display: flex;                                      /* Gjør header til en flexbox */
-    flex-wrap: wrap;                                    /* Lar flexbox elementer gå over flere linjer om nødvendig */
-    align-items: center;                                /* Sentrer alle elementer til midten */
-    justify-content: space-between;                     /* Mellomrom i mellom elementer */
-    padding: 40px 0px;                                  /* 40px mellomrom over og under header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0px;
 }
 
 .logo {
-    font-size: 28px;                                    /* Setter størrelse på logo font */
-    font-weight: bold;                                  /* Bold font */
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 nav {
-    display: flex;                                      /* Gjør nav til en flexbox */
-    gap: 60px;                                          /* 60px mellomrom i mellom nav elementer */
-    align-items: center                                 /* Sentrer elementer vertikalt */
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 nav a {
-    text-decoration: none;                              /* Fjern underline på lenker */
-    color: #000000;                                   /* Setter tekstfarge til svart */
-}
-
-.search {
-    display: flex;                                      /* Gjør søkeboks til en flexbox */
-    align-items: center;                                /* Sentrer elementer vertikalt */
-    flex: 1;                                            /* flex-grow: 1; flex-shrink: 1; */
-}
-
-.search input {
-    padding: 8px 15px;                                  /* Padding for å gi pusterom rundt teksten */
-    font-size: 16px;                                    /* Setter størrelse på søkeboks tekst font */
-    max-width: 200px;                                   /* Setter maks størrelse på selve søkeboksen */
-    width: 100%;                                        /* Sørger for at søkeboks bruker all nødvendig plass */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-}
-
-.search, button {
-    background: none;                                   /* Skjuler søke knappen, siden kun ikonet skal syns */
-    border: none;                                       /* Skjuler border rundt søke knappen, siden kun ikonet skal syns */
-    cursor: pointer;                                    /* Endrer utseende på musepeker når du holder over knapp */
-}
-
-button.search-button {
-    position: absolute;                                 /* Setter plassering på søkeknapp... */
-    margin-left: 190px;                                 /* ...og den skal på høyre side! */
+    text-decoration: none;
+    color: #000000;
 }
 
 .icons {
-    display: flex;                                      /* Gjør nav ikoner til en flexbox */
-    gap: 15px;                                          /* Gir ikonene litt pusterom */
-    justify-content: right;                             /* Ikonene skal holdes på høyre side */
-    flex: 1;                                            /* flex-grow: 1; flex-shrink: 1; */
+    order: 4;
+    display: flex;
+    gap: 15px;
+    justify-content: right;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 8px 15px;
+    font-size: 16px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.search, button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button.search-button {
+    position: absolute;
+    margin-left: 190px;
 }
 
 .icons i {
-    color: #000000;                                   /* Setter farge på ikonene til svart */
-    transition: 0.3s;                                   /* Lengde på animasjon, brukes på :hover */
+    color: #000000;
+    transition: 0.3s;
 }
 
 .icons i:hover {
-    font-size: 1.5em;                                   /* Når du hoverer ikonet skal ikonene bli litt større */
+    font-size: 1.5em;
 }
 
 /* BANNER */
 
 .banner-container {
-    overflow-x: auto;                                   /* Innhold i banner containeren skal kunne overflowe uten å være synlig */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    position: relative;                                 /* Posisjonerer innhold i banner container relativt til original posisjon */
-    margin: 20px 0px;                                   /* Mellomrom under banner container */
+    overflow-x: auto;
+    border-radius: 20px;
+    position: relative;
+    margin: 20px 0px;
 }
 
 .banner-slider {
-    display: flex;                                      /* Gjør .banner-slider i .banner-container til en flexbox */
-    overflow-x: auto;                                   /* Innhold i banner containeren skal kunne overflowe uten å syntes - skaper scrollbar */
-    -ms-overflow-style: none;                           /* Skjuler scrollbar på IE og Edge */
-    scrollbar-width: none;                              /* Skjuler scrollbar på Firefox */
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .banner-slider:-webkit-scrollbar {
-    display: none;                                      /* Skjuler scrollbar på Chrome, Safari og Opera */
+    display: none;
 }
 
 .banner-slide {
-    min-width: 100%;                                    /* Hver "slide" i banneren skal bruke 100% av bredden til container */
-    height: 500px;                                      /* Setter høyde på slides til 500px */
-    display: flex;                                      /* Gjør slides i .banner-slider i .banner-container til en flexbox */
-    align-items: center;                                /* Sentrerer alle elementer vertikalt */
-    justify-content: flex-end;                          /* Sentrerer alle elementer horisontalt */
-    color: #FFFFFF;                                   /* Setter farge på tekst til hvit */
-    font-size: 24px;                                    /* Setter størrelse på tekst til 24px */
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 24px;
 }
 
 .slide {
     background: url('https://cdn.prod.website-files.com/66df4605227bed2a7862f000/6738ffa226491b0492937331_Designblokk%20BG%20NO%20logo.png') no-repeat center center/cover;
+    background-color: #999999;
 }
 
 .slide-content {
-    text-align: right;                                  /* Sentrerer tekst i slide innhold horisontalt */
-    width: 45%;                                         /* Tekst skal bruke 75% av bredden i hver slide */
-    padding-right: 15%;
+    text-align: right;
+    width: 80%;
+    padding-right: 0%;
 }
 
 .slide-content h2 {
-    color: #FFFFFF;                                   /* Tittel på farge i slide content settes til hvit */
+    color: #FFFFFF;
 }
 
 .slide-content button {
-    background-color: #FFFFFF;                        /* Setter bakgrunnsfarge på knapp til hvit */
-    font-family: "Instrument Sans", sans-serif;         /* Setter font på knapper til Instrument Sans */
-    font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
-    margin: 10px 0px;                                   /* Gir knappen litt pusterom under teksten */
-    padding: 10px 40px;                                 /* Størrelse og plass inni knapp */
+    background-color: #FFFFFF;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 800;
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 10px 0px;
+    padding: 10px 40px;
 }
 
 .arrow {
-    position: absolute;                                 /* Setter posisjon på pilene i banner... */
-    top: 50%;                                           /* ...som skal være posisjonert i midten vertikalt... */
-    width: 50px;                                        /* ... */
-    height: 50px;                                       /* ...og være 50px stor i begge retninger. */
-    transform: translateY(-50%);                        /* Sammen med top: 50%; sørger denne for at knappen er i midten. */
-    background: #FFFFFF;                              /* Bakgrunnen på denne knappen skal være hvit */
-    border-radius: 50%;                                 /* Gjør at knappen er rund. */
-}
-
-.arrow.left {
-    left: 10px;                                         /* Venstre pil-knapp har 10px mellomrom fra venstre. */
-}
-
-.arrow.right {
-    right: 10px;                                        /* Høyre pil-knapp har 10px mellomrom fra høyre. */
+    display: none;
 }
 
 /* SENTRERT TITTEL */
 
 .centered-title {
-    text-align: center;                                 /* Sentrerer tekst i midten */
-    font-size: 20px;                                    /* Setter størrelse på tekst til 20px */
-    margin-bottom: 20px;                                /* Gir teksten et mellomrom på bunn */
-    padding: 20px 0px;                                  /* Gir teksten et mellomrom på topp */
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 20px 0px;
 }
 
 /* KATEGORI KNAPPER */
 
 .category-buttons {
-    display: flex;                                      /* Gjør kategori knapp containeren til en flexbox */
-    justify-content: center;                            /* Sentrerer containeren i midten av siden */
-    gap: 10px;                                          /* Hver knapp skal ha 10px mellomrom. */
-    padding: 10px;                                      /* Gir knappene et mellomrom på topp */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
 }
 
 .category-buttons button {
-    border: 2px solid #DDDDDD;                        /* Gir knappene et mellomrom på topp */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    font-family: "Instrument Sans", sans-serif;         /* Setter font på knapper til Instrument Sans */
-    font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
-    transition: background-color 0.2s, color 0.2s;      /* Setter en transition som brukes til animasjon når knapp er hoveret (:hover) */
-    padding: 10px 20px;                                 /* Størrelse og plass inni knapp */
+    border: 2px solid #DDDDDD;
+    border-radius: 20px;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    transition: background-color 0.2s, color 0.2s;
+    padding: 10px 20px;
 }
 
 .category-buttons button:hover {
-    background-color: #DDDDDD;                        /* Når knapp er hoveret endres bakgrunns farge til grå... */
-    color: #000000;                                   /* ...og tekst fargen til svart. */
+    background-color: #DDDDDD;
+    color: #000000;
 }
 
 .category-buttons .active {
-    background-color: #000000;                        /* Bakgrunnsfargen settes til svart på aktiv knapp. */
-    color: #FFFFFF;                                   /* Tekstfargen settes til hvit på aktiv knapp. */
-    border-color: #000000;                            /* Border rundt knapp settes til svart på aktiv knapp. */
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
 }
 
 /* PRODUKTER */
 
 .product-grid {
-    display: flex;                                      /* Gjør produktlista til en flexbox. */
-    flex-wrap: wrap;                                    /* Produktene skal kunne wrappe over flere linjer. */
-    gap: 60px 20px;                                     /* Setter mellomrom mellom hvert produkt. */
-    justify-content: space-between;                     /* Sørger for at produktene har like mye mellomrom mellom seg. */
-    padding-bottom: 40px;                               /* Vi lager også et mellomrom under produktene. */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 20px;
+    justify-content: space-between;
+    padding-bottom: 40px;
 }
 
 .product-card {
-    width: calc(33.333% - 20px);                        /* Bredden på hvert produkt kort skal ha 33% av bredden her, med 20px margin mellomrom. */
-    position: relative;                                 /* Produktkorta skal være posisjonert relativt - brukes til favoritt ikonet senere. */
+    width: 100%;
+    position: relative;
+    background: white;
+    overflow: hidden;
 }
 
 .product-card img {
-    width: 100%;                                        /* Bilde skal bruke 100% av bredden på kortet. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    width: 100%;
+    border-radius: 20px;
 }
 
 .product-card .card-content {
-    display: flex;                                      /* For å få prisen på samme linje som produkt navn gjør vi .card-content til flexbox. */
-    justify-content: space-between;                     /* Deretter posisjonerer vi de på motsatt side av hverandre. */
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-content a {
-    text-decoration: none;                              /* Tittel-lenkene på produkt skal ikke ha underline. */
-    color: #000000;                                   /* Setter farge på tekst til svart */
+    text-decoration: none;
+    color: #000000;
 }
 
 .product-card .card-content h3 {
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
-    color: #000000;                                   /* Setter farge på tekst til svart */
+    font-size: 16px;
+    color: #000000;
 }
 
 .product-card .card-content .price {
-    font-size: 14px;                                    /* Setter størrelse på tekst til 14px */
-    color: #999999;                                   /* Setter farge på tekst til grå */
+    font-size: 14px;
+    color: #999999;
 }
 
 .favorite-icon {
-    position: absolute;                                 /* Posisjonert inni produkt korta ankeret til høyre topp. */
-    top: 10px;                                          /* 10px fra topp. */
-    right: 10px;                                        /* 10px fra høyre. */
-    background: rgba(255, 255, 255, 0.5);             /* Bakgrunnsfargen settes til hvit med 0.5 synlighet. */
-    border-radius: 50%;                                 /* Vi gjør denne rund. */
-    padding: 6px 8px;                                   /* Gir knappen mellomrom inni til ikonet. */
-    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0;
 }
 
 .favorite-icon:hover {
-    background: rgba(255, 171, 171, 0.5);             /* Bakgrunnsfargen gjøres rød med 0.5 synlighet når du hoverer. */
+    background: rgba(255, 171, 171, 0.5);
 }
 
 /* KATEGORIER */
 
 .grid-container {
-    display: grid;                                      /* Vi gjør grid containeren til kategoriene til en grid. */
-    grid-template-columns: 1fr 1fr 1fr;                 /* Det skal være 3 kolonner... */
-    grid-template-rows: 1fr 1fr 1fr;                    /* ...og 3 rader. */
-    gap: 30px;                                          /* Disse skal ha 30px mellomrom mellom hverandre. */
-    padding: 40px 0px;                                  /* Vi lager også et mellomrom over kategoriene. */
-    grid-template-areas:                                /* Setter mønsteret til griden på desktop-versjon av siden. */
-      "A B C"
-      "D D C"
-      "D D E"; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "A"
+        "B"
+        "C"
+        "D"
+        "E";
+    gap: 30px;
+    padding: 40px 0px;
 }
 
 .category {
-    font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
-    color: #FFFFFF;                                   /* Setter farge på font til hvit */
-    background-color: #DDDDDD;                        /* Hvis nettsiden ikke klarer å laste ned bilde - bruk grå farge. */
-    padding: 125px;                                     /* Jeg setter størrelsen på rommet rundt teksten i boksen. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    display: flex;                                      /* Jeg gjør kategoriboksene til en flexbox... */
-    justify-content: center;                            /* ...slik at vi kan justere innholdet til å være i midten. */
-    align-items: center;                                /* Ditto. */
+    grid-column: 1 / 2;
+    font-weight: 800;
+    color: #FFFFFF;
+    background-color: #DDDDDD;
+    padding: 120px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .category:nth-child(1) {
-    grid-area: A;                                       /* Jeg gir hver kategoriboks en bokstav slik at jeg kan referere de i .grid-template-areas i containeren. */
-    background-image: url("/img/air-jordans.webp");     /* Setter bilde som brukes i bakgrunn av kategoriboksen. */
-    background-repeat: no-repeat;                       /* Bilde skal ikke repetere seg... */
-    background-size: cover;                             /* ...og skal bruke hele boksen til å displaye bilde. */
+    grid-area: A;
+    background-image: url("/img/air-jordans.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-/* Jeg kommer ikke til å kommentere alle disse ... ok? */
 
 .category:nth-child(2) {
     grid-area: B;
@@ -315,240 +307,251 @@ button.search-button {
 /* SCROLL CONTAINER */
 
 .scrolling-container {
-    display: flex;                                     /* Jeg gjør scroll containeren til en flexbox. */
-    overflow-x: auto;                                  /* Her passer vi på at innhold i flexboxen ikke vises om det "blør" utenfor siden. */
-    gap: 20px;                                         /* Jeg gir boksene inni et mellomrom på 20px. */
-    padding-bottom: 20px;                              /* 20px mellomrom fra container til scrollbar */
-    margin-bottom: 80px;                               /* Jeg lager et mellomrom på bunn av scroll containeren. */
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 /* ANMELDELSER */
 
 .scrolling-container .review {
-    border: 1px solid #DDDDDD;                       /* Lager en border på 1px i grå farge rundt anmeldelsene. */
-    padding: 20px;                                     /* Gir innholdet i boksene et rom rundt på 20px. */
-    border-radius: 20px;                               /* Hurra for runde hjørner! */
-    flex: 0 0 auto;                                    /* Vi lar innholdet bruke så mye plass det trenger, siden vi skal ha scrolle-funksjonalitet. */
-    width: 350px;                                      /* Men jeg setter likevel en maks begrensning på bredden til 350px. */
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    width: 289px;                                   /* Oppgaven ba om 289px bredde på anmeldelse-kortene */
 }
 
 .scrolling-container .review img {
-    border-radius: 50%;                                /* Bildet på anmelder skal være rund. */
-    width: 100px;                                      /* Og i følge oppgavebeskrivelse skal den ha 100px bredde... */
-    height: 100px;                                     /* ...og 100px høyde. */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 
 /* FOOTER */
 
 .footer-content {
-    display: flex;                                      /* Gjør footer til en flexbox. */
-    padding: 20px 0px 80px 0px;                         /* Jeg gir footer mellomrom 20px over og 80px under. */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0px 80px 0px;
 }
 
 footer a {
-    text-decoration: none;                              /* Fjern underline på logo lenke i footer */
-    color: #000000;                                   /* Setter tekstfarge til svart */
+    text-decoration: none;
+    color: #000000;
     display: inline-block;
 }
 
 .footer-section {
-    flex: 1;                                            /* flex-grow: 1; flex-shrink: 1; for å holde innhold mot venstre. */
+    flex: 1;
 }
 
 .footer-section h1, .footer-section h2 {
-    font-size: 14px;                                    /* Setter størrelse på tekst til 14px */
+    font-size: 14px;
 }
 
 .footer-section p, .footer-section a {
-    font-size: 14px;                                    /* Setter størrelse på tekst til 14px */
-    color: #000000;                                   /* Setter farge på lenker og ikoner til svart. */
-    text-decoration: none;                              /* Fjerner understrek på lenker. */
-    margin: 5px 0;                                      /* Setter mellomrom mellom tekst. */
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    margin: 5px 0;
 }
 
 .footer-section a:hover {
-    text-decoration: underline;                         /* Gir lenker understreken tilbake - kun når man hoverer. */
+    text-decoration: underline;
 }
 
 .footer-section.social h2 {
-    margin-bottom: 20px;                                /* 20px mellomrom under ikonene i footer. */
+    margin-bottom: 20px;
 }
 
-/* PRODUKT-SIDE */
+/* PRODUKT SIDE */
 
 nav.breadcrumb {
-    gap: 20px;                                          /* Breadcrumbs skal ha 20px mellomrom i mellom hverandre. */
-    padding-bottom: 30px;                               /* Lager også et 30px mellomrom under. */
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 30px;
+    padding-left: 0px;
 }
 
 .product-container {
-    display: flex;                                      /* Gjør product container til en flexbox... */
-    gap: 40px;                                          /* ...og gir elementene 40px mellomrom. */
-    padding-bottom: 40px;                               /* Selve product containeren får også 40px mellomrom under */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
 }
 
 /* PRODUKT BILDER */
 
 .product-images {
-    position: sticky;                                   /* Produktbildene skal være "sticky" (synlig hele tiden) når du scroller nedover. */
-    height: 690px;                                      /* Makshøyden må settes for at position: sticky skal skjønne hvor den skal stoppe. */
-    top: 10%;                                           /* Den skal begynne å sticke når du har scrollet ned 10% av siden. */
-    display: flex;                                      /* Gjør container med produkt bildene til en flexbox... */
-    flex-direction: row;                                /* ...og setter retningen på den til flex-direction: row */
-    flex: 2;                                            /* Container med produkt bildene gis en flex verdi på 2 */
-    gap: 40px;                                          /* Vi gir elementene 40px mellomrom. */
+    position: static;
+    height: 100%;
+    display: flex;
+    gap: 20px;
 }
 
 .aside-images {
-    flex: 1;                                            /* De små bildene på venstre side skal ha en flex verdi på 1... */
+    flex: 1;
 }
 
 .aside-images img {
-    width: 100%;                                        /* De små bildene skal bruke 100% av sin tilgitte bredde. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    width: 100%;
+    border-radius: 20px;
 }
 
 .main-image {
-    flex: 3.5;                                          /* Hovedbildet skal ha en flex verdi på 3.5... */
+    flex: 3.5;
 }
 
 .main-image img {
-    width: 100%;                                        /* Hovedbildet skal bruke 100% av sin tilgitte bredde. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    width: 100%;
+    border-radius: 20px;
 }
 
 /* PRODUKT DETALJER */
 
 .details {
-    flex: 1;                                            /* Container med produkt detaljer gis en flex verdi på 1 */
+    flex: 1;
+    padding-left: 0px;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .details h1, .details h2, .details p, .details button, .details select, .details section, .details footer {
-    margin-bottom: 20px;                                /* Mellomrom på 20px rundt forskjellige deler av detaljer. */
+    margin-bottom: 20px;
+}
+
+.details a {
+    text-decoration: none;
+    color: #000;
 }
 
 .price {
-    font-size: 24px;                                    /* Størrelsen på font for pris settes til 24px */
-    color: #333333;                                   /* Fargen på font for pris settes til grå */
+    font-size: 24px;
+    color: #333;
 }
 
 .product-buttons {
-    display: flex;                                      /* Produkt knappene (Legg til Handlevogn + Hjerte) gjøres til en flexbox. */
-    gap: 10px;                                          /* De får også et mellomrom på 10px. */
+    display: flex;
+    gap: 10px;
 }
 
 .product-buttons button {
-    padding: 10px 20px;                                 /* Størrelse og plass inni knapp */
-    background-color: #000000;                        /* Fargen på knapp settes til svart */
-    color: #FFFFFF;                                   /* Fargen på tekst inni knapp settes til hvit */
-    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    font-family: "Instrument Sans", sans-serif;         /* Setter font på knapper til Instrument Sans */
-    font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
 }
 
 .product-buttons button:hover {
-    background-color: #333333;                        /* Fargen på knappen skal gjøres gråere når du holder over den. */
+    background-color: #333333;
 }
 
 .product-buttons button, .product-buttons .heart-button {
-    width: 100%;                                        /* Container rundt favorittknappen skal bruke 100% av sin tilgitte bredde. */
+    width: 100%;
 }
 
 .product-buttons .heart-button {
-    border: 1px solid #CCCCCC;                        /* Favorittknappen får en border rundt på 1px med grå farge. */
-    background-color: #FFFFFF;                        /* Fargen på knapp settes til hvit */
-    color: #000000;                                   /* Fargen på ikon inni knapp settes til svart */
-    width: 20%;                                         /* Knappen skal bruke 20% av bredden */
-    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 20%;
+    cursor: pointer;
 }
 
 .product-buttons .heart-button:hover {
-    background-color: #F0F0F0;                        /* Fargen på knappen skal gjøres gråere når du holder over den. */
+    background-color: #F0F0F0;
 }
 
 select {
-    padding: 10px;                                      /* "Velg størrelse"-menyen får 10px mellomrom rundt den... */
-    width: 100%;                                        /* ...og den skal bruke 100% av bredden. */
+    padding: 10px;
+    width: 100%;
 }
 
 select#size {
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    font-family: "Instrument Sans", sans-serif;         /* Setter font på knapper til Instrument Sans */
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
+    border-radius: 20px;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 16px;
 }
 
 details {
-    padding: 15px 0;                                    /* Expand-boksene til mer produktinfo får 15px mellomrom over og under. */
+    padding: 15px 0;
 }
 
 summary {
-    display: flex;                                      /* Expand-boksene skal bli en flexbox. */
-    justify-content: space-between;                     /* Innhold skal være spredd til hver side av boksene. */
-    cursor: pointer;                                    /* Endrer musepeker når du hoverer over boksen. */
-    font-size: 14px;                                    /* Setter størrelse på tekst til 16px */
-    font-weight: 800;                                   /* Setter tykkelse på font til verdi av 800 */
-    padding: 10px 0px;                                  /* De får 10px mellomrom over og under. */
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 0px;
 }
 
 table.sizing-table {
-    border: 1px solid #CCCCCC;                        /* Jeg ga størrelsestabellen en border på 1px i grå farge... */
-    padding: 5px;                                       /* ...med et 5px mellomrom rundt. */
+    border: 1px solid #CCCCCC;
+    padding: 5px;
 }
 
 table.sizing-table tbody tr td {
-    text-align: center;                                 /* Teksten i størrelsestabellen midtstilles */
-    border: 1px solid #CCCCCC;                        /* Jeg ga også hvert individuelle element en border på 1px i grå farge... */
-    padding: 5px;                                       /* ...med et 5px mellomrom rundt. */
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    padding: 5px;
 }
 
 table.sizing-table tbody tr th {
-    padding: 8px;                                       /* Titlene i størrelsestabellen får et ekstra mellomrom på 8px. */
+    padding: 8px;
 }
 
 .product-review {
-    border: 1px solid #CCCCCC;                        /* Anmeldelsesboksen får border på 1px i grå farge... */
-    padding: 0px 15px;                                  /* ...med 15px ekstra rom inni boksen på høyre og venstre side... */
-    margin-top: 20px;                                   /* ...og et mellomrom på 20px over boksen. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    border: 1px solid #CCCCCC;
+    padding: 0px 15px;
+    margin-top: 20px;
+    border-radius: 20px;
 }
 
 .product-review p {
-    margin-bottom: 15px;                                /* Teksten inni anmeldelsesboksen får justert 15px mellomrom under. */
+    margin-bottom: 15px;
 }
 
 /* PRODUKTKORT FEAT. SCROLLING */
 
+.scrolling-product-card {
+    padding-bottom: 20px;
+    position: relative;
+}
+
 .scrolling-product-card img {
-    width: 300px;                                       /* Vi setter bredden på bildet inni kortet. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
+    width: 300px;
+    border-radius: 20px;
 }
 
 .scrolling-product-card .card-content {
-    display: flex;                                      /* For å få prisen på samme linje som produkt navn gjør vi .card-content til flexbox. */
-    justify-content: space-between;                     /* Deretter posisjonerer vi de på motsatt side av hverandre. */
+    display: flex;
+    justify-content: space-between;
 }
 
 .scrolling-product-card .card-content h3 {
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
+    font-size: 16px;
 }
 
 .scrolling-product-card .card-content .price {
-    font-size: 14px;                                    /* Setter størrelse på tekst til 14px */
-    color: #999999;                                   /* Setter farge på tekst til grå */
-}
-
-.scrolling-product-card {
-    padding-bottom: 20px;                               /* 20px mellomrom fra container til scrollbar */
+    font-size: 14px;
+    color: #999999;
 }
 
 /* HANDLEKURV */
 
 .shopping-cart-step {
     background-color: #fff;
-    padding: 40px 200px;
-    border: 1px solid #CCCCCC;                        /* Anmeldelsesboksen får border på 1px i grå farge... */
+    padding: 40px 20px;
+    border: 1px solid #CCCCCC;
     border-radius: 20px;
     margin-bottom: 20px;
 }
@@ -561,6 +564,7 @@ table.sizing-table tbody tr th {
 
 .cart-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
@@ -579,7 +583,7 @@ table.sizing-table tbody tr th {
 }
 
 .product-cart-info {
-    position: relative;                                 /* Produktkorta skal være posisjonert relativt - brukes til favoritt ikonet senere. */
+    position: relative;
     flex: 1;
 }
 
@@ -590,8 +594,8 @@ table.sizing-table tbody tr th {
 
 .product-cart-info .price, .product-cart-info .color {
     margin: 5px 0;
-    font-size: 18px;                                    /* Størrelsen på font for pris settes til 24px */
-    color: #333333;                                   /* Fargen på font for pris settes til grå */
+    font-size: 18px;
+    color: #333333;
 }
 
 .item-options {
@@ -599,57 +603,46 @@ table.sizing-table tbody tr th {
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 .item-options label {
     margin-right: 5px;
-    font-size: 18px;                                    /* Størrelsen på font for pris settes til 24px */
+    font-size: 18px;
 }
 
 .item-options select, .item-options input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
-    width: 10%;
-    font-size: 16px;                                    /* Setter størrelse på tekst til 16px */
+    width: 100%;
+    font-size: 16px;
 }
 
 .item-actions {
-    position: absolute;                                 /* Posisjonert inni produkt korta ankeret til høyre topp. */
-    top: 10px;                                          /* 10px fra topp. */
-    right: 10px;                                        /* 10px fra høyre. */
+    top: 10px;
+    right: 10px;
     align-items: center;
     gap: 10px;
 }
 
 .item-actions button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.item-actions .favorite {
-    color: #e74c3c;
-}
-
-.item-actions .delete {
-    color: #e74c3c;
+    font-size: 20px;                                         /* Størrelse på ikoner i handlekurv */
 }
 
 .item-actions .icon {
-    top: 10px;                                          /* 10px fra topp. */
-    right: 10px;                                        /* 10px fra høyre. */
-    border-radius: 20px;                                /* Hurra for runde hjørner! */
-    padding: 6px 8px;                                   /* Gir knappen mellomrom inni til ikonet. */
-    cursor: pointer;                                    /* Endrer musepeker når du hoverer over ikonet. */
+    top: 10px;                                               /* Ikoner skal plasseres 10px fra topp og høyre i handlekurv element */ 
+    right: 10px;
+    border-radius: 20px;
+    padding: 6px 8px;
+    cursor: pointer;
     border: 1px solid #CCCCCC;
     background-color: #FFFFFF;
     width: 75px;
 }
 
 .icon:hover {
-    background-color: #F0F0F0;                        /* Fargen på knappen skal gjøres gråere når du holder over den. */
+    background-color: #F0F0F0;
 }
 
 /* KONTAKTOPPLYSNINGER */
@@ -680,23 +673,24 @@ fieldset {
 
 .shopping-cart-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
     margin-bottom: 10px;
     text-align: left;
 }
 
 .shopping-cart-form label {
+    padding-bottom: 10px;
     font-size: 1rem;
     color: #333;
     display:flex;
     flex-direction:column;
-  }
+}
 
 .shopping-cart-form input {
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 20px;
     display:flex;
     flex-direction:column;
 }
@@ -714,65 +708,108 @@ fieldset {
     align-items: center;
 }
 
+.similiar-products-title {
+    padding-bottom: 20px;
+}
+
+.similiar-products-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.similiar-products-title a:hover {
+    text-decoration: underline;
+}
+
+.styled-link {
+    color: #000;
+    text-decoration: none;
+}
+    
+.styled-link:hover {
+    text-decoration: underline;
+}
+
+/* LEVERING */
+
+.delivery-option {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.delivery-option label {
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+.delivery-option .delivery-details {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+}
+
+.delivery-option p {
+    margin-right: 5px;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.disclaimer {
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.shopping-cart-checkbox {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.checkout-button {
+    padding: 15px 20px;
+    width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.checkout-button:hover {
+    background-color: #333333;
+}
+
+
+
 
 /* -- CSS for nettbrett -- */
 
-
-@media (max-width: 1400px) {
-    body {
-        width: 90%;
-    }
+@media (min-width: 801px) and (max-width: 1400px) {
     .header {
         flex-direction: column;
     }
-    .arrow {
-        display: none;
-    }
     .product-card {
-        background: white;
         width: calc(50% - 15px);
-        position: relative;
     }
     .grid-container {
-        display: grid;
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 1fr 1fr; 
-        gap: 30px;
-        padding: 40px 0px;
         grid-template-areas: 
           "A B"
           "C D"
           "E E"; 
-    }
-    .category {
-        grid-column: 1 / 2;
-    }
-    nav {
-        padding-left: 50px;
-        margin-bottom: 20px;
-        padding-top: 10px;
-    }
-    nav.breadcrumb {
-        flex-direction: row;
-        gap: 20px;
-        padding-bottom: 30px;
     }
     .product-images {
         position: static;
         height: 100%;
         display: flex;
         gap: 40px;
-    }
-    .aside-images {
-        flex: 1;
-    }
-    .aside-images img {
-        border-radius: 20px;
-        width: 100%;
-    }
-    .main-image {
-        display: inline-block;
-        flex: 3.5;
     }
     .product-container {
         display: flex;
@@ -791,63 +828,177 @@ fieldset {
     .banner-slide {
         justify-content: center;
     }
+    .similiar-products-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shopping-cart-step {
+        padding: 40px 60px;
+    }
+    .cart-item {
+        flex-direction: row;
+    }
+    
+    .cart-item figure {
+        margin: 0;
+    }
+    
+    .cart-item img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    .item-actions {
+        position: absolute;
+    }
+
+    .item-options select, .item-options input {
+        width: 20%;
+    }
+
+    .shopping-cart-form {
+        flex-direction: row;
+    }
+
+    .delivery-price {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }
+    
 }
 
+/* -- CSS for desktop -- */
 
-/* -- CSS for mobil -- */
-
-
-@media (max-width: 801px) {
+@media (min-width: 1401px) {
     body {
-        width: 90%;
+        width: 1200px;
     }
+
     .header {
-        flex-direction: column;
+        flex-direction: row;
     }
-    .logo {
-        order: 2;
-        margin-bottom: 10px;
-    }
+
     nav {
-        order: 3;
-        flex-direction: column;
-        gap: 10px;
-        padding-left: 0px;
-        margin-bottom: 10px;
-        padding-top: 10px;
+        flex-direction: row;
+        gap: 30px;
+        padding-left: 50px;
     }
+
     .icons {
-        order: 4;
+        flex: 1;
     }
+
+    .search {
+        flex: 1;
+    }
+
     .arrow {
-        display: none;
+        display: inline;
+        position: absolute;                                 /* Setter posisjon på pilene i banner... */
+        top: 50%;                                           /* ...som skal være posisjonert i midten vertikalt... */
+        width: 50px;                                        /* ... */
+        height: 50px;                                       /* ...og være 50px stor i begge retninger. */
+        transform: translateY(-50%);                        /* Sammen med top: 50%; sørger denne for at knappen er i midten. */
+        background: #FFFFFF;                              /* Bakgrunnen på denne knappen skal være hvit */
+        border-radius: 50%;                                 /* Gjør at knappen er rund. */
     }
+    
+    .arrow.left {
+        left: 10px;                                         /* Venstre pil-knapp har 10px mellomrom fra venstre. */
+    }
+    
+    .arrow.right {
+        right: 10px;                                        /* Høyre pil-knapp har 10px mellomrom fra høyre. */
+    }
+
     .product-card {
-        background: white;
-        overflow: hidden;
-        width: 100%;
-        position: relative;
+        width: calc(33.333% - 20px);
     }
+
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
         grid-template-areas: 
-        "A"
-        "B"
-        "C"
-        "D"
-        "E";
+          "A B C"
+          "D D C"
+          "D D E"; 
     }
-    .category {
-        grid-column: 1 / 2;
-    }
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-    section {
-        margin: unset;
-    }
+
     .product-images {
-        gap: 20px;
+        position: sticky;
+        height: 690px;
+        top: 10%;
+        display: flex;
+        gap: 40px;
     }
+
+    .details {
+        padding-left: 40px;
+        max-width: 35%;
+        min-width: 35%;
+    }
+
+    .slide-content {
+        width: 45%;
+        padding-right: 15%;
+    }
+    
+    .banner-slide {
+        justify-content: flex-end;
+    }
+
+    .footer-content {
+        flex-direction: row;
+    }
+
+    .product-container {
+        flex-direction: row;
+    }
+    .similiar-products-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shopping-cart-step {
+        padding: 40px 200px;
+    }
+    .cart-item {
+        flex-direction: row;
+    }
+    
+    .cart-item figure {
+        margin: 0;
+    }
+    
+    .cart-item img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    .item-actions {
+        position: absolute;
+    }
+
+    .item-options select, .item-options input {
+        width: 10%;
+    }
+
+    .shopping-cart-form {
+        flex-direction: row;
+    }
+
+    .delivery-price {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }
+    
 }
