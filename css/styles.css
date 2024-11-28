@@ -284,7 +284,7 @@ button.search-button {
 
 .category:nth-child(1) {
     grid-area: A;                                                   /* Setter grid-område for kategori A */
-    background-image: url("/img/air-jordans.webp");                 /* Bakgrunnsbilde på kategori A */
+    background-image: url("../img/air-jordans.webp");                 /* Bakgrunnsbilde på kategori A */
     background-repeat: no-repeat;                                   /* Bakgrunnsbilde skal ikke gjenta seg */
     background-size: cover;                                         /* Bakgrunnsbilde skal dekke hele området */
 }
@@ -293,28 +293,28 @@ button.search-button {
 
 .category:nth-child(2) {
     grid-area: B;
-    background-image: url("/img/kaktus.webp");
+    background-image: url("../img/kaktus.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .category:nth-child(3) {
     grid-area: C;
-    background-image: url("/img/accessories.webp");
+    background-image: url("../img/accessories.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .category:nth-child(4) {
     grid-area: D;
-    background-image: url("/img/sport.webp");
+    background-image: url("../img/sport.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .category:nth-child(5) {
     grid-area: E;
-    background-image: url("/img/gaming.webp");
+    background-image: url("../img/gaming.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
