@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Produktsiden i Tobias Ugland sin eksamensinnlevering i Webutvikling høst 2024.">
     <title>Produkt - Eksamen</title>
     <!-- Henter CSS lokalt -->
     <link rel="stylesheet" href="css/styles.css">
@@ -14,10 +15,11 @@
     <script src="https://kit.fontawesome.com/e4c92540c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <a href="#main-content" class="jump-to-main" aria-label="Hopp til Hovedinnhold">Hopp til Hovedinnhold</a>
+    <header class="header" id="top">
         <section class="search">
             <input type="text" placeholder="Søk...">
-            <button class="search-button">
+            <button class="search-button" aria-label="Søk">
                 <i class="fa-solid fa-magnifying-glass fa-lg"></i>
             </button>
         </section>
@@ -34,7 +36,8 @@
             <a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
         </section>
     </header>
-    <main>
+    <a href="#top" class="scroll-to-top" aria-label="Skroll til toppen"><i class="fa-solid fa-chevron-up fa-xl"></i></a>
+    <main id="main-content">
         <nav class="breadcrumb">
             <a href="index.html">Hjem</a> <i class="fa-solid fa-chevron-right"></i>
             <a href="index.html#popular-categories">Kategorier</a> <i class="fa-solid fa-chevron-right"></i>
@@ -56,7 +59,7 @@
                 <a href="#"><h2>Jordan</h2></a>
                 <p class="price">1 845 kr inkl. mva.</p>
                 <p class="color">Farge: Dark Mocha</p>
-                <select id="size" name="size">
+                <select id="size" aria-label="Velg størrelse" name="size">
                     <option value="">Velg størrelse</option>
                     <option value="">XS</option>
                     <option value="">S</option>
@@ -69,8 +72,8 @@
                     <button class="heart-button" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                 </div>
                 <hr class="solid">
-                <details>
-                    <summary>Materiale og vedlikehold <span><i class="fa-solid fa-plus fa-sm" aria-label="Åpne for å lese mer"></i></span></summary>
+                <details aria-label="Klikk for å lese mer">
+                    <summary>Materiale og vedlikehold <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
                     <ul>
                         <li>Overmateriale: 95% vikose, 5% elastan</li>
                         <li>Materiale ermer: 100% polyester</li>
@@ -78,13 +81,13 @@
                       </ul>
                 </details>
                 <hr class="solid">
-                <details>
-                    <summary>Produktdetaljer <span><i class="fa-solid fa-plus fa-sm" aria-label="Åpne for å lese mer"></i></span></summary>
+                <details aria-label="Klikk for å lese mer">
+                    <summary>Produktdetaljer <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
                     <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavillions, award-winning fireworks and seasonal special events.</p>
                 </details>
                 <hr class="solid">
-                <details>
-                    <summary>Størrelsestabell <span><i class="fa-solid fa-plus fa-sm" aria-label="Åpne for å lese mer"></i></span></summary>
+                <details aria-label="Klikk for å lese mer">
+                    <summary>Størrelsestabell <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
                     <p>Sjekk hvordan din vanlige størrelse konverterer til andre størrelser i vår størrelsesguide. Husk at dette kun er en generell guide og at størrelsene kan variere i forhold til merke og modell.</p>
                     <table class="sizing-table">
                         <tr>
@@ -202,12 +205,26 @@
                       </table>
                 </details>
                 <hr class="solid">
-                <details>
-                    <summary>Anmeldelser <span><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star" aria-label="Åpne for å lese mer"></i> 32</span></summary>
+                <details aria-label="Klikk for å lese mer">
+                    <summary>Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        32</span>
+                    </summary>
                     <article class="product-review">
                         <p>Rober Golden</p>
                         <p>2024-11-21</p>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> <i class="fa-regular fa-star"></i>
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span>
                         <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
                     </article>
                 </details>
@@ -227,7 +244,13 @@
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
                         </section>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span> - 842 Anmeldelser
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
@@ -236,7 +259,13 @@
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
                         </section>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span> - 842 Anmeldelser
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
@@ -245,7 +274,13 @@
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
                         </section>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span> - 842 Anmeldelser
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
@@ -254,7 +289,13 @@
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
                         </section>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span> - 842 Anmeldelser
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
@@ -263,7 +304,13 @@
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
                         </section>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span> - 842 Anmeldelser
                     </article>
                     <article class="scrolling-product-card">
                         <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
@@ -272,7 +319,13 @@
                             <a href="product.html"><h3>Produkt</h3></a>
                             <p class="price">Kr 1999</p>
                         </section>
-                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                        <span role="img" aria-label="4 av 5 stjerner">
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-regular fa-star"></i>
+                        </span> - 842 Anmeldelser
                     </article>
                 </section>
             </section>
@@ -295,6 +348,7 @@
                 <p><a href="index.html#popular-products">Produkter</a></p>
                 <p><a href="index.html#popular-categories">Kategorier</a></p>
                 <p><a href="#footer">Kontakt oss</a></p>
+                <p><a href="Tilgjengelighetserklæring.pdf">Tilgjengelighetserklæring</a></p>
             </section>
             <section class="footer-section social">
                 <h2>SOSIALE MEDIER</h2>

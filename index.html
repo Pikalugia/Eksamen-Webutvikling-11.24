@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forsiden i Tobias Ugland sin eksamensinnlevering i Webutvikling høst 2024.">
     <title>Hjem - Eksamen</title>
     <!-- Henter CSS lokalt -->
     <link rel="stylesheet" href="css/styles.css">
@@ -14,10 +15,11 @@
     <script src="https://kit.fontawesome.com/e4c92540c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <a href="#main-content" class="jump-to-main" aria-label="Hopp til Hovedinnhold">Hopp til Hovedinnhold</a>
+    <header class="header" id="top">
         <section class="search">
             <input type="text" placeholder="Søk...">
-            <button class="search-button">
+            <button class="search-button" aria-label="Søk">
                 <i class="fa-solid fa-magnifying-glass fa-lg"></i>
             </button>
         </section>
@@ -34,7 +36,8 @@
             <a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
         </section>
     </header>
-    <main>
+    <a href="#top" class="scroll-to-top" aria-label="Skroll til toppen"><i class="fa-solid fa-chevron-up fa-xl"></i></a>
+    <main id="main-content">
         <section class="banner-container">
             <section class="banner-slider" id="banner-slider">
                 <div class="banner-slide slide">
@@ -59,8 +62,8 @@
                     </article>
                 </div>
             </section>
-            <button class="arrow left"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="arrow right"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="arrow left" aria-label="Forrige slide"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="arrow right" aria-label="Neste slide"><i class="fa-solid fa-arrow-right"></i></button>
         </section>
         <section id="popular-products" class="centered-title">
             <h2>Våre mest populære produkter</h2>
@@ -79,7 +82,13 @@
                     <a href="product.html"><h3>Produkt</h3></a>
                     <p class="price">Kr 1999</p>
                 </section>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                <span role="img" aria-label="4 av 5 stjerner">
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </span> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur"></a>
@@ -88,7 +97,13 @@
                     <a href="product.html"><h3>Produkt</h3></a>
                     <p class="price">Kr 1999</p>
                 </section>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                <span role="img" aria-label="4 av 5 stjerner">
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </span> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur"></a>
@@ -97,7 +112,13 @@
                     <a href="product.html"><h3>Produkt</h3></a>
                     <p class="price">Kr 1999</p>
                 </section>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                <span role="img" aria-label="4 av 5 stjerner">
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </span> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur"></a>
@@ -106,7 +127,13 @@
                     <a href="product.html"><h3>Produkt</h3></a>
                     <p class="price">Kr 1999</p>
                 </section>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                <span role="img" aria-label="4 av 5 stjerner">
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </span> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur"></a>
@@ -115,7 +142,13 @@
                     <a href="product.html"><h3>Produkt</h3></a>
                     <p class="price">Kr 1999</p>
                 </section>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                <span role="img" aria-label="4 av 5 stjerner">
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </span> - 842 Anmeldelser
             </article>
             <article class="product-card">
                 <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur"></a>
@@ -124,45 +157,75 @@
                     <a href="product.html"><h3>Produkt</h3></a>
                     <p class="price">Kr 1999</p>
                 </section>
-                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i> - 842 Anmeldelser
+                <span role="img" aria-label="4 av 5 stjerner">
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </span> - 842 Anmeldelser
             </article>
         </section>
         <section id="popular-categories" class="centered-title">
             <h2>Våre mest populære kategorier</h2>
             <p>Oppdag det beste av det beste</p>
             <section class="grid-container">
-                <article class="category" alt="Bilde av røde Air Jordan 1s"><h3>KATEGORI 1</h3></article>
-                <article class="category" alt="Bilde av kaktus i hvit potte"><h3>KATEGORI 2</h3></article>
-                <article class="category" alt="Bilde av svarte sko og en klokke på mørkt treverk"><h3>KATEGORI 3</h3></article>
-                <article class="category" alt="Bilde av sportsutstyr på en blå bakgrunn"><h3>KATEGORI 4</h3></article>
-                <article class="category" alt="Bilde av en spillkontroller"><h3>KATEGORI 5</h3></article>
+                <article class="category" aria-label="Bilde av røde Air Jordan 1s"><h3>KATEGORI 1</h3></article>
+                <article class="category" aria-label="Bilde av kaktus i hvit potte"><h3>KATEGORI 2</h3></article>
+                <article class="category" aria-label="Bilde av svarte sko og en klokke på mørkt treverk"><h3>KATEGORI 3</h3></article>
+                <article class="category" aria-label="Bilde av sportsutstyr på en blå bakgrunn"><h3>KATEGORI 4</h3></article>
+                <article class="category" aria-label="Bilde av en spillkontroller"><h3>KATEGORI 5</h3></article>
             </section>
         </section>
         <section id="reviews" class="reviews">
-            <left><h2>Anmeldelser</h2></left>
+            <h2>Anmeldelser</h2>
             <section class="scrolling-container">
                 <article class="review">
                     <img src="img/golden.webp" alt="Rober Golden">
                     <h3>Rober Golden</h3>
-                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <span role="img" aria-label="4 av 5 stjerner">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-regular fa-star"></i>
+                    </span>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
                 </article>
                 <article class="review">
                     <img src="img/golden.webp" alt="Rober Golden">
                     <h3>Rober Golden</h3>
-                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <span role="img" aria-label="4 av 5 stjerner">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-regular fa-star"></i>
+                    </span>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
                 </article>
                 <article class="review">
                     <img src="img/golden.webp" alt="Rober Golden">
                     <h3>Rober Golden</h3>
-                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <span role="img" aria-label="4 av 5 stjerner">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-regular fa-star"></i>
+                    </span>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
                 </article>
                 <article class="review">
                     <img src="img/golden.webp" alt="Rober Golden">
                     <h3>Rober Golden</h3>
-                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                    <span role="img" aria-label="4 av 5 stjerner">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-regular fa-star"></i>
+                    </span>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus...</p>
                 </article>
             </section>
@@ -185,6 +248,7 @@
                 <p><a href="index.html#popular-products">Produkter</a></p>
                 <p><a href="index.html#popular-categories">Kategorier</a></p>
                 <p><a href="#footer">Kontakt oss</a></p>
+                <p><a href="Tilgjengelighetserklæring.pdf">Tilgjengelighetserklæring</a></p>
             </section>
             <section class="footer-section social">
                 <h2>SOSIALE MEDIER</h2>

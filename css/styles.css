@@ -15,6 +15,39 @@ section {
     margin: unset;
 }
 
+/* SKROLL TIL TOPP */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    color: #000;
+    background-color: #FFF;
+    padding: 12px 11px;
+    border-radius: 50%;
+    border: 1px solid #CCC;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* HOPP TIL HOVEDINNHOLD */
+
+.jump-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #DDD;
+    color: #000;
+    font-weight: 800;
+    padding: 8px;
+    z-index: 100;
+
+}
+
+.jump-to-main:focus {
+    top: 0px;
+}
+
 /* HEADER */
 
 .header {
@@ -75,15 +108,12 @@ nav a {
 button.search-button {
     position: absolute;
     margin-left: 190px;
+    padding: 10px;
 }
 
 .icons i {
     color: #000000;
     transition: 0.3s;
-}
-
-.icons i:hover {
-    font-size: 1.5em;
 }
 
 /* BANNER */
@@ -173,11 +203,6 @@ button.search-button {
     padding: 10px 20px;
 }
 
-.category-buttons button:hover {
-    background-color: #DDDDDD;
-    color: #000000;
-}
-
 .category-buttons .active {
     background-color: #000000;
     color: #FFFFFF;
@@ -223,7 +248,6 @@ button.search-button {
 
 .product-card .card-content .price {
     font-size: 14px;
-    color: #999999;
 }
 
 .favorite-icon {
@@ -236,10 +260,6 @@ button.search-button {
     font-size: 14px;
     cursor: pointer;
     margin: 0;
-}
-
-.favorite-icon:hover {
-    background: rgba(255, 171, 171, 0.5);
 }
 
 /* KATEGORIER */
@@ -360,10 +380,6 @@ footer a {
     margin: 5px 0;
 }
 
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
 .footer-section.social h2 {
     margin-bottom: 20px;
 }
@@ -450,10 +466,6 @@ nav.breadcrumb {
     font-size: 16px;
 }
 
-.product-buttons button:hover {
-    background-color: #333333;
-}
-
 .product-buttons button, .product-buttons .heart-button {
     width: 100%;
 }
@@ -464,10 +476,6 @@ nav.breadcrumb {
     color: #000000;
     width: 20%;
     cursor: pointer;
-}
-
-.product-buttons .heart-button:hover {
-    background-color: #F0F0F0;
 }
 
 select {
@@ -483,6 +491,10 @@ select#size {
 
 details {
     padding: 15px 0;
+}
+
+.details label {
+    display: none;
 }
 
 summary {
@@ -543,7 +555,6 @@ table.sizing-table tbody tr th {
 
 .scrolling-product-card .card-content .price {
     font-size: 14px;
-    color: #999999;
 }
 
 /* HANDLEKURV */
@@ -556,7 +567,7 @@ table.sizing-table tbody tr th {
     margin-bottom: 20px;
 }
 
-.shopping-cart-step h1 {
+.shopping-cart-step h3 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: left;
@@ -641,10 +652,6 @@ table.sizing-table tbody tr th {
     width: 75px;
 }
 
-.icon:hover {
-    background-color: #F0F0F0;
-}
-
 /* KONTAKTOPPLYSNINGER */
 
 .checkout-form {
@@ -717,18 +724,11 @@ fieldset {
     text-decoration: none;
 }
 
-.similiar-products-title a:hover {
-    text-decoration: underline;
-}
-
 .styled-link {
     color: #000;
     text-decoration: none;
 }
-    
-.styled-link:hover {
-    text-decoration: underline;
-}
+
 
 /* LEVERING */
 
@@ -780,13 +780,6 @@ fieldset {
     font-weight: 800;
     font-size: 16px;
 }
-
-.checkout-button:hover {
-    background-color: #333333;
-}
-
-
-
 
 /* -- CSS for nettbrett -- */
 
@@ -869,7 +862,11 @@ fieldset {
         top: 0px;
         right: 10px;
     }
-    
+
+    .scroll-to-top {
+        bottom: 30px;
+        right: 60px;
+    }
 }
 
 /* -- CSS for desktop -- */
@@ -1000,5 +997,62 @@ fieldset {
         top: 0px;
         right: 10px;
     }
+
+    .scroll-to-top {
+        bottom: 30px;
+        right: 60px;
+    }
+
+    /* HOVER ANIMASJONER - KUN PÅ DESKTOP */
+
+    .product-buttons button:hover {
+        background-color: #333333;
+    }
+
+    .favorite-icon:hover {
+        background: rgba(255, 171, 171, 0.5);
+    }
+
+    .checkout-button:hover {
+        background-color: #333333;
+    }
+
+    .styled-link:hover {
+        text-decoration: underline;
+    }
+
+    .similiar-products-title a:hover {
+        text-decoration: underline;
+    }
+
+    .icon:hover {
+        background-color: #F0F0F0;
+    }
+
+    .product-buttons .heart-button:hover {
+        background-color: #F0F0F0;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #F0F0F0;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .icons i:hover {
+        font-size: 1.5em;
+    }
+
+    .category-buttons button:hover {
+        background-color: #DDDDDD;
+        color: #000000;
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline;
+    }
+    
     
 }

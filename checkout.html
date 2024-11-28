@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Handlekurven i Tobias Ugland sin eksamensinnlevering i Webutvikling høst 2024.">
     <title>Handlekurv - Eksamen</title>
     <!-- Henter CSS lokalt -->
     <link rel="stylesheet" href="css/styles.css">
@@ -14,10 +15,11 @@
     <script src="https://kit.fontawesome.com/e4c92540c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <a href="#main-content" class="jump-to-main" aria-label="Hopp til Hovedinnhold">Hopp til Hovedinnhold</a>
+    <header class="header" id="top">
         <section class="search">
             <input type="text" placeholder="Søk...">
-            <button class="search-button">
+            <button class="search-button" aria-label="Søk">
                 <i class="fa-solid fa-magnifying-glass fa-lg"></i>
             </button>
         </section>
@@ -34,12 +36,13 @@
             <a href="checkout.html" aria-label="Handlekurv"><i class="fa-solid fa-basket-shopping fa-lg"></i></a>
         </section>
     </header>
-    <main>
+    <a href="#top" class="scroll-to-top" aria-label="Skroll til toppen"><i class="fa-solid fa-chevron-up fa-xl"></i></a>
+    <main id="main-content">
         <a href="index.html" class="styled-link"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</a>
         <section class="centered-title">
             <h2>Handlekurv</h2>
             <section class="shopping-cart-step">
-                <h1>1. Handlekurven din</h1>
+                <h3>1. Handlekurven din</h3>
                 <article class="cart-item">
                     <figure>
                         <img src="img/air-jordans-product2.webp" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ved siden av hverandre.">
@@ -48,23 +51,23 @@
                         <h2>AIR JORDAN 1 HIGH - Høye joggesko</h2>
                         <p class="price">1 845 kr</p>
                         <p class="color">Farge: Dark Mocha</p>
-                    </header>
                     <section class="item-options">
-                        <label for="size">Størrelse</label>
-                        <select id="size" name="size" value="s">
+                        <label for="size-1">Størrelse</label>
+                        <select id="size-1">
                             <option value="xs">XS</option>
                             <option value="s" selected>S</option>
                             <option value="m">M</option>
                             <option value="l">L</option>
                             <option value="xl">XL</option>
                         </select>
-                        <label for="quantity">Antall</label>
-                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <label for="quantity-1">Antall</label>
+                        <input type="number" id="quantity-1" name="quantity-1" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
+                        <button class="icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart"></i></button>
+                        <button class="icon" aria-label="Slett"><i class="fa-regular fa-trash-can"></i></button>
                     </section>
+                </section>
                 </article>
                 <article class="cart-item">
                     <figure>
@@ -74,23 +77,23 @@
                         <h2>AIR JORDAN 1 HIGH - Høye joggesko</h2>
                         <p class="price">1 845 kr</p>
                         <p class="color">Farge: Dark Mocha</p>
-                    </header>
                     <section class="item-options">
-                        <label for="size">Størrelse</label>
-                        <select id="size" name="size" value="s">
+                        <label for="size-2">Størrelse</label>
+                        <select id="size-2">
                             <option value="xs">XS</option>
                             <option value="s" selected>S</option>
                             <option value="m">M</option>
                             <option value="l">L</option>
                             <option value="xl">XL</option>
                         </select>
-                        <label for="quantity">Antall</label>
-                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <label for="quantity-2">Antall</label>
+                        <input type="number" id="quantity-2" name="quantity-2" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
+                        <button class="icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart"></i></button>
+                        <button class="icon" aria-label="Slett"><i class="fa-regular fa-trash-can"></i></button>
                     </section>
+                </section>
                 </article>
                 <article class="cart-item">
                     <figure>
@@ -100,23 +103,23 @@
                         <h2>AIR JORDAN 1 HIGH - Høye joggesko</h2>
                         <p class="price">1 845 kr</p>
                         <p class="color">Farge: Dark Mocha</p>
-                    </header>
                     <section class="item-options">
-                        <label for="size">Størrelse</label>
-                        <select id="size" name="size" value="s">
+                        <label for="size-3">Størrelse</label>
+                        <select id="size-3">
                             <option value="xs">XS</option>
                             <option value="s" selected>S</option>
                             <option value="m">M</option>
                             <option value="l">L</option>
                             <option value="xl">XL</option>
                         </select>
-                        <label for="quantity">Antall</label>
-                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <label for="quantity-3">Antall</label>
+                        <input type="number" id="quantity-3" name="quantity-3" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
+                        <button class="icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart"></i></button>
+                        <button class="icon" aria-label="Slett"><i class="fa-regular fa-trash-can"></i></button>
                     </section>
+                </section>
                 </article>
                 <article class="cart-item">
                     <figure>
@@ -126,54 +129,55 @@
                         <h2>AIR JORDAN 1 HIGH - Høye joggesko</h2>
                         <p class="price">1 845 kr</p>
                         <p class="color">Farge: Dark Mocha</p>
-                    </header>
                     <section class="item-options">
-                        <label for="size">Størrelse</label>
-                        <select id="size" name="size" value="s">
+                        <label for="size-4">Størrelse</label>
+                        <select id="size-4">
                             <option value="xs">XS</option>
                             <option value="s" selected>S</option>
                             <option value="m">M</option>
                             <option value="l">L</option>
                             <option value="xl">XL</option>
                         </select>
-                        <label for="quantity">Antall</label>
-                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <label for="quantity-4">Antall</label>
+                        <input type="number" id="quantity-4" name="quantity-4" min="1" value="1">
                     </section>
                     <section class="item-actions">
-                        <button class="icon"><i class="fa-regular fa-heart" aria-label="Legg til i favoritter"></i></button>
-                        <button class="icon"><i class="fa-regular fa-trash-can" aria-label="Slett"></i></button>
+                        <button class="icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart"></i></button>
+                        <button class="icon" aria-label="Slett"><i class="fa-regular fa-trash-can"></i></button>
                     </section>
+                </section>
                 </article>
             </section>
             <section class="shopping-cart-step">
-                <h1>2. Dine opplysninger</h1>
+                <h3>2. Dine opplysninger</h3>
                 <form>
                     <fieldset>
                         <h4>Leveringsadresse</h4>
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="firstName">Fornavn</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="Nora*">
+                                <input type="text" id="firstName" name="firstName" placeholder="Nora*" required>
                             </section>
                             <section class="shopping-cart-form-group">
                                 <label for="lastName">Etternavn</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Nordmann*">
+                                <input type="text" id="lastName" name="lastName" placeholder="Nordmann*" required>
                             </section>
                         </section>
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="streetAddress">Gateadresse</label>
-                                <input type="text" id="streetAddress" name="streetAddress" placeholder="BRA veien 4*">
+                                <input type="text" id="streetAddress" name="streetAddress" placeholder="BRA veien 4*" required>
                             </section>
                         </section>
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="postalCode">Postnummer</label>
-                                <input type="number" id="postalCode" name="postalCode" placeholder="1752*">
+                                <!-- Pattern fungerer ikke med type="number" så her bruker jeg "text" isteden. Postnummer = maks 4 tall. -->
+                                <input type="text" id="postalCode" name="postalCode" placeholder="1752*" pattern="\w{4,4}" required>
                             </section>
                             <section class="shopping-cart-form-group">
                                 <label for="city">Poststed</label>
-                                <input type="text" id="city" name="city" placeholder="Halden*">
+                                <input type="text" id="city" name="city" placeholder="Halden*" required>
                             </section>
                         </section>
                     </fieldset>
@@ -182,13 +186,14 @@
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="email">E-post</label>
-                                <input type="email" id="email" name="email" placeholder="norandman@hiof.no*">
+                                <input type="email" id="email" name="email" placeholder="norandman@hiof.no*" required>
                             </section>
                         </section>
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="phone">Telefon</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+4749***018">
+                                <!-- Et norsk telefonnummer er på 8 siffer, vi gir også bruker mulighet til å ha opptil 11 siffer i tilfelle +47 -->
+                                <input type="tel" id="phone" name="phone" placeholder="+4749***018" pattern="\w{8,11}">
                         </section>
                     </section>
                     </fieldset>
@@ -198,25 +203,25 @@
                 </form>
             </section>
             <section class="shopping-cart-step">
-                <h1>3. Levering</h1>
+                <h3>3. Levering</h3>
                 <form>
                     <fieldset>
                         <h4>Leveringsvalg</h4>
                         <div class="delivery-option">
-                            <input type="radio" name="delivery" value="express_home"><label>Express Hjemlevering</label>
+                            <input type="radio" name="delivery" value="express_home" id="express_home"><label for="express_home">Express Hjemlevering</label>
                             <p class="delivery-details">3-4 Virkedager</p>
                             <p class="delivery-price">59 kr&nbsp;&nbsp;<i class="fa-solid fa-truck-fast" aria-label="Ekspress hjemlevering"></i></p>
                             <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
                         </div>
         
                         <div class="delivery-option">
-                            <input type="radio" name="delivery" value="express_home"><label>Ekspress Pakke til utleveringssted</label>
+                            <input type="radio" name="delivery" value="express_post" id="express_post"><label for="express_post">Ekspress Pakke til utleveringssted</label>
                             <p class="delivery-details">1-3 Virkedager</p>
                             <p class="delivery-price">59 kr&nbsp;&nbsp;<i class="fa-solid fa-truck" aria-label="Ekspress levering til utleveringssted"></i></p>
                         </div>
         
                         <div class="delivery-option">
-                            <input type="radio" name="delivery" value="standard_home"><label>Standard Hjemlevering</label>
+                            <input type="radio" name="delivery" value="standard_home" id="standard_home"><label for="standard_home">Standard Hjemlevering</label>
                             <p class="delivery-details">5-8 Virkedager</p>
                             <p class="delivery-price">Gratis&nbsp;&nbsp;<i class="fa-solid fa-box-open" aria-label="Hjemlevering"></i></p>
                             <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
@@ -225,7 +230,7 @@
                 </form>
             </section>
             <section class="shopping-cart-step">
-                <h1>4. Betaling</h1>
+                <h3>4. Betaling</h3>
                 <form>
                     <fieldset>
                         <h4>Betal med kort <i class="fa-regular fa-credit-card fa-sm" aria-label="Betalingskort"></i></h4>
@@ -233,17 +238,19 @@
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="cardNumber">Kortnummer</label>
-                                <input type="text" id="cardNumber" name="cardNumber" placeholder="342342****4435">
+                                <!-- Kortnummer er på maks 15 eller 16 nummer, så her lager jeg en pattern. -->
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="342342****4435" pattern="\w{15,16}" required>
                             </section>
                         </section>
                         <section class="shopping-cart-form">
                             <section class="shopping-cart-form-group">
                                 <label for="expiryDate">Utløpsdato</label>
-                                <input type="date" id="expiryDate" name="expiryDate" placeholder="mm / dd / yyyy">
+                                <input type="date" id="expiryDate" name="expiryDate" required>
                             </section>
                             <section class="shopping-cart-form-group">
                                 <label for="cvccvv">CVC/CVV</label>
-                                <input type="number" id="cvccvv" name="cvccvv" placeholder="CVC/CVV">
+                                <!-- Pattern fungerer ikke med type="number" så her bruker jeg "text" isteden. CVC = maks 3 tall. -->
+                                <input type="text" id="cvccvv" name="cvccvv" placeholder="CVC/CVV" pattern="\w{3,3}" required>
                             </section>
                         </section>
                         <hr class="solid">
@@ -279,6 +286,7 @@
                 <p><a href="index.html#popular-products">Produkter</a></p>
                 <p><a href="index.html#popular-categories">Kategorier</a></p>
                 <p><a href="#footer">Kontakt oss</a></p>
+                <p><a href="Tilgjengelighetserklæring.pdf">Tilgjengelighetserklæring</a></p>
             </section>
             <section class="footer-section social">
                 <h2>SOSIALE MEDIER</h2>
