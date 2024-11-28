@@ -43,22 +43,27 @@
             <a href="index.html#popular-categories">Kategorier</a> <i class="fa-solid fa-chevron-right"></i>
             <a href="product.html"><strong>Produktnavn</strong></a>
         </nav>
-        <section class="product-container">
+        <!-- Produktinformasjon -->
+        <section class="product-container" itemscope itemtype="http://schema.org/Product">
+            <!-- Bilder -->
             <section class="product-images">
                 <aside class="aside-images">
-                    <img src="img/air-jordans-product2.webp" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ved siden av hverandre.">
-                    <img src="img/air-jordans-product3.webp" alt="Bilde av Air Jordans 1 High Dark Mocha sett fra siden.">
-                    <img src="img/air-jordans-product4.webp" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ovenfra.">
+                    <img src="img/air-jordans-product2.webp" itemprop="image" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ved siden av hverandre.">
+                    <img src="img/air-jordans-product3.webp" itemprop="image" alt="Bilde av Air Jordans 1 High Dark Mocha sett fra siden.">
+                    <img src="img/air-jordans-product4.webp" itemprop="image" alt="Bilde av et par Air Jordans 1 High Dark Mocha sett ovenfra.">
                 </aside>
                 <section class="main-image">
-                    <img src="img/air-jordans-product.webp" alt="Bilde av person som sitter på stol, kamerafokus på Air Jordans 1 High Dark Mocha sko.">
+                    <img src="img/air-jordans-product.webp" itemprop="image" alt="Bilde av person som sitter på stol, kamerafokus på Air Jordans 1 High Dark Mocha sko.">
                 </section>
             </section>
-            <section class="details">
-                <h1>AIR JORDAN 1 HIGH - Høye joggesko</h1>
+            <!-- Detaljer -->
+            <article class="details">
+                <h1 itemprop="name">AIR JORDAN 1 HIGH - Høye joggesko</h1>
                 <a href="#"><h2>Jordan</h2></a>
-                <p class="price">1 845 kr inkl. mva.</p>
+                <meta itemprop="priceCurrency" content="NOK">
+                <p class="price" itemprop="price">1 845 kr inkl. mva.</p>
                 <p class="color">Farge: Dark Mocha</p>
+                <!-- Velg størrelse -->
                 <select id="size" aria-label="Velg størrelse" name="size">
                     <option value="">Velg størrelse</option>
                     <option value="">XS</option>
@@ -67,11 +72,13 @@
                     <option value="">L</option>
                     <option value="">XL</option>
                 </select>
+                <!-- Knapper -->
                 <div class="product-buttons">
                     <button>Legg i handlekurv</button>
                     <button class="heart-button" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                 </div>
                 <hr class="solid">
+                <!-- Mer detaljer -->
                 <details aria-label="Klikk for å lese mer">
                     <summary>Materiale og vedlikehold <span><i class="fa-solid fa-plus fa-sm"></i></span></summary>
                     <ul>
@@ -206,8 +213,11 @@
                 </details>
                 <hr class="solid">
                 <details aria-label="Klikk for å lese mer">
+                    <!-- Samlet anmeldelse -->
                     <summary>Anmeldelser
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -215,6 +225,7 @@
                             <i class="fa-regular fa-star"></i>
                         32</span>
                     </summary>
+                    <!-- Individuell anmeldelse -->
                     <article class="product-review">
                         <p>Rober Golden</p>
                         <p>2024-11-21</p>
@@ -228,23 +239,27 @@
                         <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
                     </article>
                 </details>
-            </section>
+            </article>
         </section>
         <section>
+            <!-- Lignende produkter -->
             <section id="similiar-products" class="similiar-products">
                 <section class="similiar-products-title">
                     <h2 class="similar-products-title">Lignende produkter</h2>
                     <a href="#">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
                 </section>
                 <section class="scrolling-container">
-                    <article class="scrolling-product-card">
-                        <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
+                    <article class="scrolling-product-card" itemscope itemtype="http://schema.org/Product">
+                        <a itemprop="url" href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur" itemprop="image"></a>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                         <section class="card-content">
-                            <a href="product.html"><h3>Produkt</h3></a>
-                            <p class="price">Kr 1999</p>
+                            <a href="product.html"><h3 itemprop="name">Produkt</h3></a>
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <p class="price" itemprop="price">Kr 1999</p>
                         </section>
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -252,14 +267,17 @@
                             <i class="fa-regular fa-star"></i>
                         </span> - 842 Anmeldelser
                     </article>
-                    <article class="scrolling-product-card">
-                        <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
+                    <article class="scrolling-product-card" itemscope itemtype="http://schema.org/Product">
+                        <a itemprop="url" href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur" itemprop="image"></a>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                         <section class="card-content">
-                            <a href="product.html"><h3>Produkt</h3></a>
-                            <p class="price">Kr 1999</p>
+                            <a href="product.html"><h3 itemprop="name">Produkt</h3></a>
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <p class="price" itemprop="price">Kr 1999</p>
                         </section>
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -267,14 +285,17 @@
                             <i class="fa-regular fa-star"></i>
                         </span> - 842 Anmeldelser
                     </article>
-                    <article class="scrolling-product-card">
-                        <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
+                    <article class="scrolling-product-card" itemscope itemtype="http://schema.org/Product">
+                        <a itemprop="url" href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur" itemprop="image"></a>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                         <section class="card-content">
-                            <a href="product.html"><h3>Produkt</h3></a>
-                            <p class="price">Kr 1999</p>
+                            <a href="product.html"><h3 itemprop="name">Produkt</h3></a>
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <p class="price" itemprop="price">Kr 1999</p>
                         </section>
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -282,14 +303,17 @@
                             <i class="fa-regular fa-star"></i>
                         </span> - 842 Anmeldelser
                     </article>
-                    <article class="scrolling-product-card">
-                        <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
+                    <article class="scrolling-product-card" itemscope itemtype="http://schema.org/Product">
+                        <a itemprop="url" href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur" itemprop="image"></a>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                         <section class="card-content">
-                            <a href="product.html"><h3>Produkt</h3></a>
-                            <p class="price">Kr 1999</p>
+                            <a href="product.html"><h3 itemprop="name">Produkt</h3></a>
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <p class="price" itemprop="price">Kr 1999</p>
                         </section>
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -297,14 +321,17 @@
                             <i class="fa-regular fa-star"></i>
                         </span> - 842 Anmeldelser
                     </article>
-                    <article class="scrolling-product-card">
-                        <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
+                    <article class="scrolling-product-card" itemscope itemtype="http://schema.org/Product">
+                        <a itemprop="url" href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur" itemprop="image"></a>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                         <section class="card-content">
-                            <a href="product.html"><h3>Produkt</h3></a>
-                            <p class="price">Kr 1999</p>
+                            <a href="product.html"><h3 itemprop="name">Produkt</h3></a>
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <p class="price" itemprop="price">Kr 1999</p>
                         </section>
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -312,14 +339,17 @@
                             <i class="fa-regular fa-star"></i>
                         </span> - 842 Anmeldelser
                     </article>
-                    <article class="scrolling-product-card">
-                        <a href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produkt bilde"></a>
-                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg" style="color: #ffffff;"></i></button>
+                    <article class="scrolling-product-card" itemscope itemtype="http://schema.org/Product">
+                        <a itemprop="url" href="product.html"><img src="https://media.snl.no/media/49165/standard_compressed_norge.jpg" alt="Produktbilde, norsk natur" itemprop="image"></a>
+                        <button class="favorite-icon" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button>
                         <section class="card-content">
-                            <a href="product.html"><h3>Produkt</h3></a>
-                            <p class="price">Kr 1999</p>
+                            <a href="product.html"><h3 itemprop="name">Produkt</h3></a>
+                            <meta itemprop="priceCurrency" content="NOK">
+                            <p class="price" itemprop="price">Kr 1999</p>
                         </section>
-                        <span role="img" aria-label="4 av 5 stjerner">
+                        <span role="img" aria-label="4 av 5 stjerner" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <meta itemprop="ratingValue" content="4">
+                            <meta itemprop="reviewCount" content="842">
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -338,10 +368,10 @@
         <section class="footer-content">
             <section class="footer-section contact">
                 <h2>KONTAKT</h2>
-                <p><i class="fa-solid fa-location-dot fa-lg"></i>&nbsp;&nbsp;<strong>Adresse:</strong>&nbsp;&nbsp;&nbsp;&nbsp;B R A Veien 4, 1757 Halden</p>
-                <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;<strong>Telefon:</strong>&nbsp;&nbsp;&nbsp;&nbsp;69 60 80 00</p>
-                <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<strong>E-post:</strong>&nbsp;&nbsp;&nbsp;&nbsp;halden@hiof.no</p>
-                <p><i class="fa-solid fa-clock"></i>&nbsp;&nbsp;<strong>Åpningstider:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Stenger 15:00</p>
+                <p><i class="fa-solid fa-location-dot fa-lg" aria-label="Adresse"></i>&nbsp;&nbsp;<strong>Adresse:</strong>&nbsp;&nbsp;&nbsp;&nbsp;B R A Veien 4, 1757 Halden</p>
+                <p><i class="fa-solid fa-phone" aria-label="Telefon"></i>&nbsp;&nbsp;<strong>Telefon:</strong>&nbsp;&nbsp;&nbsp;&nbsp;69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope" aria-label="E-post"></i>&nbsp;&nbsp;<strong>E-post:</strong>&nbsp;&nbsp;&nbsp;&nbsp;halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock" aria-label="Åpningstider"></i>&nbsp;&nbsp;<strong>Åpningstider:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Stenger 15:00</p>
             </section>
             <section class="footer-section links">
                 <h2>SNARVEIER</h2>
